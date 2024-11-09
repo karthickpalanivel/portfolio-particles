@@ -1,0 +1,67 @@
+[
+  {
+    "title": "B2B-Hub India",
+    "year": "August 2024",
+    "shortDescription": "Connecting pulse industry of India",
+    "description": "",
+    "technologies": ["React-Native", "MySql", "Node js"],
+    "category": "Mobile-Application",
+    "githubLink": null,
+    "socialLink": "https://www.b2bhubindia.com/",
+    "demoLink": null
+  },
+  {
+    "title": "Travello",
+    "year": "September 2024",
+    "shortDescription": "Your Travel app towards your Workspace",
+    "description": "",
+    "technologies": ["React-Native", "Redux", "Node js", "MySql"],
+    "category": "Mobile-Application",
+    "githubLink": null,
+    "socialLink": null,
+    "demoLink": null
+  },
+
+  {
+    "title": "AI Helps",
+    "year": "March 2024",
+    "shortDescription": "A ChatBot serves customer's queries by AI based image solutions 24/7",
+    "description": "",
+    "technologies": [
+      "Java",
+      "SpringBoot",
+
+      "SpringAI",
+      "AWS",
+      "Postgresql"
+    ],
+    "category": "Web-Chat-Bot",
+    "githubLink": "https://github.com/karthickpalanivel/SpringAI",
+    "socialLink": null,
+    "demoLink": null
+  },
+
+  {
+    "title": "Rhino-Rewards",
+    "year": "September 2023",
+    "shortDescription": "earn SOL as rewards when you shop online",
+    "description": "This project focuses on integrating Solana (SOL) into consumer applications to bridge Web 2.0 and Web 3.0, addressing centralized control and data ownership concerns. By leveraging Solana's high throughput and low transaction costs, developers can create efficient decentralized applications (dApps) within existing Web2 infrastructure, enhancing user security, transparency, and data ownership. Additionally, introducing SOL token incentives encourages user engagement and promotes decentralized participation, paving the way for a more user-centric Web 3.0 experience.",
+    "technologies": ["React-Native", "Solana Blockchain"],
+    "category": "Web-3 Mobile Application",
+    "githubLink": null,
+    "socialLink": "https://devfolio.co/projects/rhino-rewards-59ca",
+    "demoLink": "https://www.youtube.com/watch?v=GIO8qZQ2QA4&t=3s"
+  },
+
+  {
+    "title": "Library Systems",
+    "year": "April 2023",
+    "shortDescription": "",
+    "description": "",
+    "technologies": ["Python GUI", "MySql", "Python"],
+    "category": "DeskTop-Application",
+    "githubLink": "https://github.com/karthickpalanivel/E-Book-Management-System.git",
+    "socialLink": null,
+    "demoLink": null
+  }
+]
