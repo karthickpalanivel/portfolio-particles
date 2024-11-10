@@ -5,18 +5,27 @@ import React from "react";
 import LinkedinIcon from "../assets/icons/LinkedinIcon";
 import GitHubIcon from "../assets/icons/GitHubIcon";
 import TwitterIcon from "../assets/icons/TwitterIcon";
+import MailIcon from "../assets/icons/MailIcon";
 
 const Footer = () => {
   return (
     <>
-      <footer style={{ color: "white", paddingTop:"5vh"}}>
-        <div className="grid grid-cols-3 sm:flex-col items-center">
+      <footer
+        style={{
+          color: "white",
+          paddingTop: "5vh",
+          paddingRight: "2vw",
+          paddingLeft: "2vw",
+          fontFamily: "poppins, sans-serif",
+        }}
+      >
+        <div className="grid lg:grid-cols-4 max-sm:grid-cols-2 sm:flex-col items-center">
           {/* linkedin */}
           <a
             href="https://www.linkedin.com/in/karthick-palanivel/"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 items-center sm:my-5 justify-center"
+            className="flex flex-row space-x-2 lg:justify-center max-sm:pl-3 max-sm:my-2"
           >
             <LinkedinIcon colors={"white"} />
             <p className="lg:visible max-sm:hidden">
@@ -25,12 +34,25 @@ const Footer = () => {
             <p className="lg:hidden max-sm:visible">LinkedIn</p>
           </a>
 
+          <a
+            href="mailto:karthickpalanivelit@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-row space-x-2 lg:items-center max-sm:pl-3 lg:justify-center max-sm:my-2"
+          >
+            <MailIcon colors={"#fff"} />
+            <p className="lg:visible max-sm:hidden">
+              karthickpalanivelit@gmail.com
+            </p>
+            <p className="lg:hidden max-sm:visible">gmail.com</p>
+          </a>
+
           {/* github */}
           <a
             href="https://github.com/karthickpalanivel/"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 items-center sm:my-5 justify-center"
+            className="flex flex-row space-x-2 lg:items-center max-sm:pl-3 lg:justify-center max-sm:my-2"
           >
             <GitHubIcon colors={"white"} />
             <p className="lg:visible max-sm:hidden">
@@ -44,7 +66,7 @@ const Footer = () => {
             href="https://twitter.com/KarthickWords"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 items-center sm:my-5 justify-center"
+            className="flex flex-row space-x-2 lg:items-center max-sm:pl-3 lg:justify-center max-sm:my-2"
           >
             <TwitterIcon colors={"#fff"} />
             <p className="lg:visible max-sm:hidden">x.com/KarthickWords</p>
@@ -52,7 +74,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="my-6 text-center text-gray-400 text-sm ">
+        <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
           Designed and developed by Karthick Palanivel
         </div>
       </footer>

@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <section
-        style={{ color: "#fff" }}
+        style={{ color: "#fff", fontFamily: "poppins, sans-serif" }}
         className="flex flex-col justify-center items-center max-sm:w-full"
       >
         {/* style={{ ...styles, padding: "20px", minHeight: "100vh" }} */}
@@ -20,7 +20,7 @@ const Home = () => {
         <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
           <div className="">
             <p className="text-[#fff] lg:text-4xl max-sm:text-xl lg:my-5 max-sm:mt-5">
-              Hi, I'm <span className="font-bold ">Karthick Palanivel</span>
+              Hi, I'm <span className="font-bold">Karthick Palanivel</span>
             </p>
             <p className="lg:text-2xl max-sm:mb-8 sm:text-center">
               A Software Developer
@@ -31,17 +31,22 @@ const Home = () => {
 
         {/* 🇯🇵🇬🇧 about me */}
 
-        <p className="lg:pt-10 lg:px-60 max-sm:px-5 text-lg text-center">
+        <p className="lg:pt-10 lg:px-60 max-sm:px-5 max-sm:my-4 text-lg min-lg:text-center">
           Versatile{" "}
           <span className="bg-gradient-to-r from-[#ff3535] via-[#e79a9a] to-[#3e3eb7] px-1 rounded-sm text-transparent bg-clip-text underline ">
             Bilingual Japanese Software Engineer
           </span>{" "}
-          experienced in both Web🌐 & Mobile📱 Development. Ample experience in
-          full-stack development, delivering well-documented, responsive, and
-          dynamic development with code.
+          experienced <span className="underline">2+ years</span> in both Web🌐
+          & Mobile📱 Application Development. Ample experience in full-stack
+          development, delivering well-documented, responsive, and dynamic
+          development with code.
         </p>
 
-        <div className="lg:mt-20 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
+        <p>
+          <span className="underline">#Open to Work</span>{" "}
+        </p>
+
+        <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
           <a
             href="https://drive.google.com/file/d/1diPYc134OSVa5Xof3FQSrsuxv8U4G7C0/view?usp=sharing"
             target="_blank"
@@ -59,6 +64,11 @@ const Home = () => {
             Get In Touch
           </a>
         </div>
+
+        <p className="mt-10 max-sm:px-4">
+          I’m currently open to new opportunities, reach out via email or
+          connect with me on my social media.
+        </p>
       </section>
     </>
   );

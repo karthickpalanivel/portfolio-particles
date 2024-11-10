@@ -11,6 +11,10 @@ import Ind from "../assets/images/flag-in.png";
 import Jp from "../assets/images/jp.png";
 import Uk from "../assets/images/gb.png";
 
+// language
+import i18n from "../locale/i18n";
+import { useTranslation } from "react-i18next";
+
 const NavBar = ({ active, setActive }) => {
   const [language, setLanguage] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +26,10 @@ const NavBar = ({ active, setActive }) => {
 
   return (
     <div className="flex justify-between items-center p-4 text-[#fff]">
-      <div className="flex space-x-3 flex-row justify-center">
+      <div
+        className="flex space-x-3 flex-row justify-center cursor-pointer"
+        onClick={() => setActive("home")}
+      >
         <p className="text-xl visible max-sm:hidden">Palanivel Jr.</p>
         <img src={Ind} alt="Indian-flag" className="w-8 object-contain" />
       </div>

@@ -1,0 +1,56 @@
+[
+  {
+    "event": "Hack onChain Day",
+    "location": "IIT Madras, Chennai",
+    "category": "Meet-up",
+    "eventDescription": "",
+    "eventDate": "19 October 2024",
+    "eventImage": [],
+    "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731221797/hackday_eigxus.png"
+  },
+  {
+    "event": "Dine with Devs",
+    "location": "Guindy, Chennai",
+    "category": "Meet-up",
+    "eventDescription": "",
+    "eventDate": "27 July 2024",
+    "eventImage": [],
+    "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731202581/web3Chennai_rgrrsz.jpg"
+  },
+  {
+    "event": "Eth India",
+    "location": "Bengaluru",
+    "category": "Hackathon",
+    "eventDescription": "",
+    "eventDate": "03 December 2023",
+    "eventImage": [],
+    "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731218722/ethIndiaLogo_oacnqs.png"
+  },
+  {
+    "event": "Solana Hacker House",
+    "location": "Bengaluru",
+    "category": "Hackathon",
+    "eventDescription": "",
+    "eventDate": "14 September 2023",
+    "eventImage": [],
+    "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731202581/solanaLogo_zngmzf.jpg"
+  },
+  {
+    "event": "KIOT-Chain",
+    "location": "Salem",
+    "category": "Hackathon",
+    "eventDescription": "",
+    "eventDate": "25 August 2023",
+    "eventImage": [],
+    "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731202581/kiot_eenedz.jpg"
+  },
+  {
+    "event": "Alt hack",
+    "location": "Guindy, Chennai",
+    "category": "Hackathon",
+    "eventDescription": "",
+    "eventDate": "24 March 2024",
+    "eventImage": [],
+    "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731218722/ibcMediaLogo_wejh9x.png"
+  }
+]
