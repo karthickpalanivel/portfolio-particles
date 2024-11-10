@@ -31,7 +31,7 @@ const Footer = () => {
             <p className="lg:visible max-sm:hidden">
               linkedin.com/karthickpalanivel
             </p>
-            <p className="lg:hidden max-sm:visible">LinkedIn</p>
+            <p className="lg:hidden max-sm:visible">linkedin.com</p>
           </a>
 
           <a
@@ -58,7 +58,7 @@ const Footer = () => {
             <p className="lg:visible max-sm:hidden">
               github.com/karthickpalanivel
             </p>
-            <p className="lg:hidden max-sm:visible">GitHub</p>
+            <p className="lg:hidden max-sm:visible">github.com</p>
           </a>
 
           {/* Twitter */}
@@ -70,7 +70,7 @@ const Footer = () => {
           >
             <TwitterIcon colors={"#fff"} />
             <p className="lg:visible max-sm:hidden">x.com/KarthickWords</p>
-            <p className="lg:hidden max-sm:visible">X.com</p>
+            <p className="lg:hidden max-sm:visible">x.com</p>
           </a>
         </div>
 

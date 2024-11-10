@@ -1,0 +1,50 @@
+[
+  {
+    "imageName": "ரியாக்ட்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/react_d2degg.png"
+  },
+  {
+    "imageName": "டெய்ல்விண்ட் CSS",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144463/tailwind_ohcnl4.png"
+  },
+  {
+    "imageName": "ரெடக்ஸ்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/redux_odajib.png"
+  },
+  {
+    "imageName": "ஜாவா",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/java_fn0e91.png"
+  },
+  {
+    "imageName": "ஸ்பிரிங்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/spring_coblx7.png"
+  },
+  {
+    "imageName": "ஸ்பிரிங் பூட்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144463/springBoot_v80cuv.png"
+  },
+  {
+    "imageName": "நோட்.ஜெஸ்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/node-js_undgoz.png"
+  },
+  {
+    "imageName": "கிராஃப் க்யூஎல்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731145031/GraphQL_ppyybr.png"
+  },
+  {
+    "imageName": "மை.எஸ்க்யூஎல்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/mysql_ue29sb.png"
+  },
+  {
+    "imageName": "போஸ்ட்கிரெஸ்க்யூஎல்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/postgresql_lsaxz1.png"
+  },
+  {
+    "imageName": "ஏடபிள்யூஎஸ் டிப்ளாய்மென்ட்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/aws_qrije5.png"
+  },
+  {
+    "imageName": "டாக்கர்",
+    "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144904/dockerLogo_qgqh82.png"
+  }
+]

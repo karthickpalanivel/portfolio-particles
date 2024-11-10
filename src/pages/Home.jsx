@@ -1,13 +1,9 @@
 // Blog, short intro
 
 import React from "react";
-import { useTheme } from "../hooks/ThemeContext";
-import { lightTheme, darkTheme } from "../hooks/ColorStyles";
 import Face from "../assets/images/face.png";
 
 const Home = () => {
-  const { theme, toggleTheme } = useTheme();
-  const styles = theme === "light" ? lightTheme : darkTheme;
 
   return (
     <>

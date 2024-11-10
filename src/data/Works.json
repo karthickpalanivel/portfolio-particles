@@ -3,7 +3,7 @@
     "title": "B2B-Hub India",
     "year": "August 2024",
     "shortDescription": "Connecting pulse industry of India",
-    "description": "",
+    "description": "I played a pivotal role in developing the B2B HUB INDIA mobile app using React Native. He built critical screens like Welcome, Onboarding (with language selection stored in AsyncStorage), Registration, Home, and Profile. I also implemented multi-language support using i18Next and useContext for four languages which increased usage across cities and regions of India 70%, and developed key features like product details, order summary with invoice generation, and seamless data navigation for sellers.",
     "technologies": ["React-Native", "MySql", "Node js"],
     "category": "Mobile-Application",
     "githubLink": null,
@@ -14,33 +14,24 @@
     "title": "Travello",
     "year": "September 2024",
     "shortDescription": "Your Travel app towards your Workspace",
-    "description": "",
+    "description": "Travello is a mobile application designed as a vehicle management system to streamline employee transportation between home and office. Built with React Native, Redux, Node.js, and MySQL, it allows admins to assign vehicles to employees based on their login and logout times. The app provides real-time updates for employees and drivers, displaying assigned vehicle details, driver information, and arrival schedules during shift changes, ensuring efficient and timely commutes.",
     "technologies": ["React-Native", "Redux", "Node js", "MySql"],
     "category": "Mobile-Application",
     "githubLink": null,
     "socialLink": null,
     "demoLink": null
   },
-
   {
     "title": "AI Helps",
     "year": "March 2024",
     "shortDescription": "A ChatBot serves customer's queries by AI based image solutions 24/7",
-    "description": "",
-    "technologies": [
-      "Java",
-      "SpringBoot",
-
-      "SpringAI",
-      "AWS",
-      "Postgresql"
-    ],
+    "description": "AI Helps is an advanced AI-powered chatbot designed to address customer queries around the clock, providing image-based solutions using spring-open-ai. Developed with Java, Spring Boot, and Spring AI, this web-based chatbot leverages AWS for scalable deployment and PostgreSQL for efficient data management. It intelligently responds to user prompts with relevant product recommendations or support solutions, enhancing customer satisfaction with quick, accurate responses. The system utilizes AI to analyze user interactions and deliver personalized assistance, making it ideal for businesses aiming to optimize customer support through automation.",
+    "technologies": ["Java", "SpringBoot", "SpringAI", "AWS", "Postgresql"],
     "category": "Web-Chat-Bot",
     "githubLink": "https://github.com/karthickpalanivel/SpringAI",
     "socialLink": null,
     "demoLink": null
   },
-
   {
     "title": "Rhino-Rewards",
     "year": "September 2023",
@@ -56,8 +47,8 @@
   {
     "title": "Library Systems",
     "year": "April 2023",
-    "shortDescription": "",
-    "description": "",
+    "shortDescription": "Manage your library record digitally",
+    "description": "Library Systems is a desktop application designed to digitize library management, providing a seamless way to handle book records, member information, and lending operations. Built using Python GUI and MySQL, it offers an intuitive interface for librarians to efficiently manage inventory, track issued books, and monitor return deadlines. The system ensures data accuracy, reduces paperwork, and enhances productivity by automating routine tasks. With secure database integration, it provides quick access to library records, improving overall management efficiency. This project is ideal for educational institutions or small libraries looking to transition from manual to digital systems for better resource management.",
     "technologies": ["Python GUI", "MySql", "Python"],
     "category": "DeskTop-Application",
     "githubLink": "https://github.com/karthickpalanivel/E-Book-Management-System.git",

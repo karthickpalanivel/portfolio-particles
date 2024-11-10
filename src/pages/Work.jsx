@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //json data
 import Skills from "../data/SkillsImages.json";
@@ -6,8 +6,22 @@ import Projects from "../data/Works.json";
 
 //icons
 import TagIcon from "../assets/icons/TagIcon";
+import { useTranslation } from "react-i18next";
+import XcloseIcon from "../assets/icons/XcloseIcon";
+import BlogIcon from "../assets/icons/BlogIcon";
+
+import "../styles/modal.css";
 
 const Work = () => {
+  const { t } = useTranslation();
+
+  const [selectProject, setSelectProject] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!modalVisible);
+  };
+
   return (
     <>
       <section
@@ -17,15 +31,16 @@ const Work = () => {
         }}
         className="lg:p-2/12"
       >
-        <p className="text-center underline text-2xl my-5">Developments</p>
+        <p className="text-center underline text-2xl my-5">
+          {t("developments")}
+        </p>
 
         {/* projects */}
         <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-8">
           {Projects.map((project, index) => (
-            <div className="lg:p-3 max-sm:py-3">
+            <div className="lg:p-3 max-sm:py-3" key={index}>
               <div className="border border-white bg-[#ffffff21] rounded-md p-4 h-fit">
                 {/* project header */}
-
                 <div className="flex flex-row justify-between">
                   <h1 className="w-1/2 text-xl underline max-sm:mb-2">
                     {project.title}
@@ -44,61 +59,63 @@ const Work = () => {
                 </p>
 
                 {/* project buttons */}
-                <div className="my-4 ">
+                <div className="my-4">
                   {project.demoLink === null &&
                     project.githubLink === null &&
-                    project.socialLink === null && (
-                      <>
-                        <p>Links Adding soon</p>
-                      </>
-                    )}
+                    project.socialLink === null && <p>Links Adding soon</p>}
 
-                  {project.demoLink !== null && (
+                  {project.demoLink && (
                     <a
                       href={project.demoLink}
-                      className="px-3 py-1 text-[#fff]  border rounded-md border-[#fff] cursor-pointer"
+                      className="px-3 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer"
                     >
-                      Demo
+                      {t("demo")}
                     </a>
                   )}
 
-                  {project.githubLink !== null && (
+                  {project.githubLink && (
                     <a
                       href={project.githubLink}
                       className={`${
-                        project.demoLink === null ? "" : "ml-5"
-                      } px-3 py-1 text-[#fff]  border rounded-md border-[#fff] cursor-pointer`}
+                        project.demoLink ? "ml-5" : ""
+                      } px-3 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer`}
                     >
-                      Github link
+                      {t("githubLink")}
                     </a>
                   )}
 
-                  {project.socialLink !== null && (
+                  {project.socialLink && (
                     <a
                       href={project.socialLink}
                       className={`${
-                        project.demoLink === null && project.githubLink === null
-                          ? ""
-                          : "ml-5"
-                      } px-2 py-1 text-[#fff]  border rounded-md border-[#fff] cursor-pointer`}
+                        project.demoLink || project.githubLink ? "ml-5" : ""
+                      } px-2 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer`}
                     >
-                      External Link
+                      {t("externalLink")}
                     </a>
                   )}
                 </div>
 
+                {/* technologies and modal trigger */}
                 <div className="lg:flex lg:flex-row justify-between items-center">
                   <div className="w-10/12 lg:flex lg:flex-row">
                     {project.technologies.map((items) => (
-                      <div className="mr-3 my-2 py-1 px-2 w-fit h-fit border border-white rounded-full">
-                        <p key={items} className="text-xs text-center">
-                          {items}
-                        </p>
+                      <div
+                        key={items}
+                        className="mr-3 my-2 py-1 px-2 w-fit h-fit border border-white rounded-full"
+                      >
+                        <p className="text-xs text-center">{items}</p>
                       </div>
                     ))}
                   </div>
-                  <p className="cursor-pointer w-fit border border-white rounded-md px-2 py-1">
-                    Read More
+                  <p
+                    className="cursor-pointer w-fit border border-white rounded-md px-2 py-1"
+                    onClick={() => {
+                      setSelectProject(project);
+                      setModalVisible(true); // Show modal
+                    }}
+                  >
+                    {t("readmore")}
                   </p>
                 </div>
               </div>
@@ -106,8 +123,31 @@ const Work = () => {
           ))}
         </div>
 
+        {/* Modal */}
+        {modalVisible && selectProject && (
+          <div className="modal">
+            <div className="overlay" onClick={toggleModal}></div>
+            <div className="modal-content z-30">
+              <div className="place-items-end" onClick={toggleModal}>
+                <XcloseIcon />
+              </div>
+              <h1>Project Name: {selectProject.title}</h1>
+              <div className="flex flex-row mt-2">
+                <BlogIcon />
+                <p className="mx-3 text-white">{selectProject.year}</p>
+              </div>
+              <p className="my-2">
+                {t("category")}: {selectProject.category}
+              </p>
+              <p className="mt-5">{selectProject.description}</p>
+
+              {/* <button className="close-btn mt-5 text-[#fff] border border-white rounded-md px-4 py-1"></button> */}
+            </div>
+          </div>
+        )}
+
         <p className="skill-set text-2xl underline text-center mt-9">
-          Proficiencies
+          {t("proficiencies")}
         </p>
         {/* skills */}
         <div className="lg:flex lg:flex-row grid grid-cols-3 items-center justify-center">
