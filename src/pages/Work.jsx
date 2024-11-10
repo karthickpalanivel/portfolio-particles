@@ -128,7 +128,10 @@ const Work = () => {
           <div className="modal">
             <div className="overlay" onClick={toggleModal}></div>
             <div className="modal-content z-30">
-              <div className="place-items-end" onClick={toggleModal}>
+              <div
+                className="place-items-end cursor-pointer"
+                onClick={toggleModal}
+              >
                 <XcloseIcon />
               </div>
               <h1>Project Name: {selectProject.title}</h1>
