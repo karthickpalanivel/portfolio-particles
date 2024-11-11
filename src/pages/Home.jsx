@@ -19,7 +19,7 @@ const Home = () => {
               Hi, I'm <span className="font-bold">Karthick Palanivel</span>
             </p>
             <p className="lg:text-2xl max-sm:mb-8 sm:text-center">
-              A Software Developer
+              A Software Engineer
             </p>
           </div>
           <img src={Face} alt="face-logo" className="rounded-full w-1/5" />
