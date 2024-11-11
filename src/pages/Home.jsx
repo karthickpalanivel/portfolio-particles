@@ -32,7 +32,7 @@ const Home = () => {
           <span className="bg-gradient-to-r from-[#ff3535] via-[#e79a9a] to-[#3e3eb7] px-1 rounded-sm text-transparent bg-clip-text underline ">
             Bilingual Japanese Software Engineer
           </span>{" "}
-          experienced <span className="underline">2+ years</span> in both Web🌐
+          experienced <span className="underline">2+ years</span> of hands-on in both Web🌐
           & Mobile📱 Application Development. Ample experience in full-stack
           development, delivering well-documented, responsive, and dynamic
           development with code.
