@@ -44,7 +44,7 @@ const Home = () => {
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
           <a
-            href="https://drive.google.com/file/d/1diPYc134OSVa5Xof3FQSrsuxv8U4G7C0/view?usp=sharing"
+            href="https://drive.google.com/file/d/13A4umARrrr9nCvWtpiQ1HQ3HBxsqTUle/view?usp=sharing"
             target="_blank"
             className="border text-center border-white px-6 py-2 rounded-md mx-10 transition-all hover:bg-white hover:text-[#000000] hover:shadow-lg hover:px-8"
             rel="noreferrer"
