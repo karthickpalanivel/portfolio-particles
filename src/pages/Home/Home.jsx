@@ -1,9 +1,30 @@
 // Blog, short intro
 
-import React from "react";
-import Face from "../assets/images/face.png";
+import React, { useState, useEffect } from "react";
+import Face from "../../assets/images/face.png";
 
 const Home = () => {
+  const langCode = localStorage.getItem("language") || "en";
+
+  const [textData, setTextData] = useState();
+  const langMap = {
+    en: () => import("./Languages/english.json"),
+    jp: () => import("./Languages/japanese.json"),
+  };
+
+  useEffect(() => {
+    const loadLanguageText = async () => {
+      const loadText = (await langMap[langCode]) || langMap.en;
+      try {
+        const text = await loadText();
+        setTextData(text);
+        console.log(text);
+      } catch (error) {
+        console.error("Error Loading langauge FILE", error);
+      }
+    };
+    loadLanguageText();
+  }, [langCode, textData]);
 
   return (
     <>
@@ -14,12 +35,13 @@ const Home = () => {
         {/* style={{ ...styles, padding: "20px", minHeight: "100vh" }} */}
 
         <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
-          <div className="">
+          <div className="max-sm:w-9/12">
             <p className="text-[#fff] lg:text-4xl max-sm:text-xl lg:my-5 max-sm:mt-5">
-              Hi, I'm <span className="font-bold">Karthick Palanivel</span>
+              {textData?.greeting}{" "}
+              <span className="font-bold">{textData?.name}</span>
             </p>
             <p className="lg:text-2xl max-sm:mb-8 sm:text-center">
-              A Software Developer
+              {textData?.title}
             </p>
           </div>
           <img src={Face} alt="face-logo" className="rounded-full w-1/5" />
@@ -28,18 +50,17 @@ const Home = () => {
         {/* 🇯🇵🇬🇧 about me */}
 
         <p className="lg:pt-10 lg:px-60 max-sm:px-5 max-sm:my-4 text-lg min-lg:text-center">
-          Versatile{" "}
+          {textData?.versatile}{" "}
           <span className="bg-gradient-to-r from-[#ff3535] via-[#e79a9a] to-[#3e3eb7] px-1 rounded-sm text-transparent bg-clip-text underline ">
-            Bilingual Japanese Software Engineer
+            {textData?.bilingual}
           </span>{" "}
-          experienced <span className="underline">2+ years</span> in both Web🌐
-          & Mobile📱 Application Development. Ample experience in full-stack
-          development, delivering well-documented, responsive, and dynamic
-          development with code.
+          {textData?.experience}{" "}
+          {/* <span className="underline">2+ years</span>  */}
+          {textData?.skills}
         </p>
 
         <p>
-          <span className="underline">#Open to Work</span>{" "}
+          <span className="underline">{textData?.availability}</span>{" "}
         </p>
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
@@ -49,7 +70,7 @@ const Home = () => {
             className="border text-center border-white px-6 py-2 rounded-md mx-10 transition-all hover:bg-white hover:text-[#000000] hover:shadow-lg hover:px-8"
             rel="noreferrer"
           >
-            Resume
+            {textData?.resume}
           </a>
           <a
             href="https://linktr.ee/KarthickPalanivel"
@@ -57,14 +78,11 @@ const Home = () => {
             rel="noreferrer"
             className="max-sm:my-4 border text-center border-white px-6 py-2 rounded-md mx-10 transition-all hover:bg-white hover:text-[#000000] hover:shadow-lg hover:px-8"
           >
-            Get In Touch
+            {textData?.contact}
           </a>
         </div>
 
-        <p className="mt-10 max-sm:px-4">
-          I’m currently open to new opportunities, reach out via email or
-          connect with me on my social media.
-        </p>
+        <p className="mt-10 max-sm:px-4">{textData?.opportunity}</p>
       </section>
     </>
   );

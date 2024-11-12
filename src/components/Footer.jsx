@@ -6,8 +6,32 @@ import LinkedinIcon from "../assets/icons/LinkedinIcon";
 import GitHubIcon from "../assets/icons/GitHubIcon";
 import TwitterIcon from "../assets/icons/TwitterIcon";
 import MailIcon from "../assets/icons/MailIcon";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
+  const langCode = localStorage.getItem("language") || "en";
+
+  const [textData, setTextData] = useState();
+  const langMap = {
+    en: () => import("./Languages/english.json"),
+    jp: () => import("./Languages/japanese.json"),
+  };
+
+  useEffect(() => {
+    const loadLanguageText = async () => {
+      const loadText = (await langMap[langCode]) || langMap.en;
+      try {
+        const text = await loadText();
+        setTextData(text);
+        console.log(text);
+      } catch (error) {
+        console.error("Error Loading langauge FILE", error);
+      }
+    };
+
+    loadLanguageText();
+  }, [langCode, textData]);
+
   return (
     <>
       <footer
@@ -31,7 +55,9 @@ const Footer = () => {
             <p className="lg:visible max-sm:hidden">
               linkedin.com/karthickpalanivel
             </p>
-            <p className="lg:hidden max-sm:visible">linkedin.com</p>
+            <p className="lg:hidden max-sm:visible">
+              {textData?.smallLinkedin}
+            </p>
           </a>
 
           <a
@@ -44,7 +70,7 @@ const Footer = () => {
             <p className="lg:visible max-sm:hidden">
               karthickpalanivelit@gmail.com
             </p>
-            <p className="lg:hidden max-sm:visible">gmail.com</p>
+            <p className="lg:hidden max-sm:visible">{textData?.smallGmail}</p>
           </a>
 
           {/* github */}
@@ -58,7 +84,7 @@ const Footer = () => {
             <p className="lg:visible max-sm:hidden">
               github.com/karthickpalanivel
             </p>
-            <p className="lg:hidden max-sm:visible">github.com</p>
+            <p className="lg:hidden max-sm:visible">{textData?.smallGithub}</p>
           </a>
 
           {/* Twitter */}
@@ -70,12 +96,12 @@ const Footer = () => {
           >
             <TwitterIcon colors={"#fff"} />
             <p className="lg:visible max-sm:hidden">x.com/KarthickWords</p>
-            <p className="lg:hidden max-sm:visible">x.com</p>
+            <p className="lg:hidden max-sm:visible">{textData?.smallTwitter}</p>
           </a>
         </div>
 
         <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
-          Designed and developed by Karthick Palanivel
+          {textData?.footer}
         </div>
       </footer>
     </>

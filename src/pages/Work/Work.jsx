@@ -1,26 +1,42 @@
-import React, { useState } from "react";
-
-//json data
-import Skills from "../data/SkillsImages.json";
-import Projects from "../data/Works.json";
+import React, { useState, useEffect } from "react";
 
 //icons
-import TagIcon from "../assets/icons/TagIcon";
-import { useTranslation } from "react-i18next";
-import XcloseIcon from "../assets/icons/XcloseIcon";
-import BlogIcon from "../assets/icons/BlogIcon";
+import XcloseIcon from "../../assets/icons/XcloseIcon";
+import BlogIcon from "../../assets/icons/BlogIcon";
 
-import "../styles/modal.css";
+import "../../styles/modal.css";
+import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
-  const { t } = useTranslation();
-
   const [selectProject, setSelectProject] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
   };
+
+  const langCode = localStorage.getItem("language") || "en";
+
+  const [textData, setTextData] = useState();
+  const langMap = {
+    en: () => import("./Languages/english.json"),
+    jp: () => import("./Languages/japanese.json"),
+  };
+
+  useEffect(() => {
+    const loadLanguageText = async () => {
+      const loadText = (await langMap[langCode]) || langMap.en;
+      try {
+        const text = await loadText();
+        setTextData(text);
+        console.log(text);
+      } catch (error) {
+        console.error("Error Loading langauge FILE", error);
+      }
+    };
+
+    loadLanguageText();
+  }, [langCode, textData]);
 
   return (
     <>
@@ -32,29 +48,36 @@ const Work = () => {
         className="lg:p-2/12"
       >
         <p className="text-center underline text-2xl my-5">
-          {t("developments")}
+          {textData?.developments}
         </p>
 
         {/* projects */}
         <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-8">
-          {Projects.map((project, index) => (
+          {textData?.projects.map((project, index) => (
             <div className="lg:p-3 max-sm:py-3" key={index}>
-              <div className="border border-white bg-[#ffffff21] rounded-md p-4 h-fit">
+              <div className="border border-white bg-[#7f7f7f21] rounded-md p-4 h-fit">
                 {/* project header */}
                 <div className="flex flex-row justify-between">
                   <h1 className="w-1/2 text-xl underline max-sm:mb-2">
                     {project.title}
                   </h1>
-                  <p className="text-right italic">{project.year}</p>
-                </div>
-
-                <div className="flex flex-row space-x-3 items-center">
-                  <TagIcon />
                   <p className="my-1">{project.category}</p>
                 </div>
 
+                <div className="mt-2 lg:flex flex-row justify-between">
+                  <div className="flex flex-row space-x-3 items-center">
+                    <OrganizationIcon colors={"#fff"} />
+                    <p className="text-sm">{project.workedMode}</p>
+                  </div>
+
+                  <div className="flex flex-row space-x-3 items-center max-sm:my-2">
+                    <BlogIcon />
+                    <p className="text-right italic">{project.year}</p>
+                  </div>
+                </div>
+
                 <p className="my-1">
-                  <span>Description: </span>
+                  <span>{textData?.description} </span>
                   {project.shortDescription}
                 </p>
 
@@ -69,7 +92,7 @@ const Work = () => {
                       href={project.demoLink}
                       className="px-3 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer"
                     >
-                      {t("demo")}
+                      {textData?.demo}
                     </a>
                   )}
 
@@ -80,7 +103,7 @@ const Work = () => {
                         project.demoLink ? "ml-5" : ""
                       } px-3 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer`}
                     >
-                      {t("githubLink")}
+                      {textData?.githubLink}
                     </a>
                   )}
 
@@ -91,7 +114,7 @@ const Work = () => {
                         project.demoLink || project.githubLink ? "ml-5" : ""
                       } px-2 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer`}
                     >
-                      {t("externalLink")}
+                      {textData?.externalLink}
                     </a>
                   )}
                 </div>
@@ -115,7 +138,7 @@ const Work = () => {
                       setModalVisible(true); // Show modal
                     }}
                   >
-                    {t("readmore")}
+                    {textData?.readMore}
                   </p>
                 </div>
               </div>
@@ -125,7 +148,7 @@ const Work = () => {
 
         {/* Modal */}
         {modalVisible && selectProject && (
-          <div className="modal">
+          <div className={`modal ${modalVisible && "active-modal"}`}>
             <div className="overlay" onClick={toggleModal}></div>
             <div className="modal-content z-30">
               <div
@@ -134,27 +157,33 @@ const Work = () => {
               >
                 <XcloseIcon />
               </div>
-              <h1>Project Name: {selectProject.title}</h1>
+              <h1>
+                {textData.projectName}: {selectProject.title}
+              </h1>
               <div className="flex flex-row mt-2">
                 <BlogIcon />
                 <p className="mx-3 text-white">{selectProject.year}</p>
               </div>
               <p className="my-2">
-                {t("category")}: {selectProject.category}
+                {textData?.category}: {selectProject.category}
               </p>
-              <p className="mt-5">{selectProject.description}</p>
-
-              {/* <button className="close-btn mt-5 text-[#fff] border border-white rounded-md px-4 py-1"></button> */}
+              <ol className="mt-5">
+                {selectProject.description.map((desc, index) => (
+                  <li key={index} className="mt-2 list-outside list-disc ml-5">
+                    {desc}
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         )}
 
         <p className="skill-set text-2xl underline text-center mt-9">
-          {t("proficiencies")}
+          {textData?.proficiencies}
         </p>
         {/* skills */}
         <div className="lg:flex lg:flex-row grid grid-cols-3 items-center justify-center">
-          {Skills.map((skills, index) => (
+          {textData?.skills.map((skills, index) => (
             <div
               key={index}
               className="w-32 flex flex-col items-center justify-center"

@@ -27,10 +27,11 @@ const NavBar = ({ active, setActive }) => {
 
   // Function to toggle language
   const handleLanguageToggle = () => {
-    const newLanguage = language === "en" ? "jp" : "en";
-    setLanguage(newLanguage);
-    changeLanguage(newLanguage); // Update i18n language
-    localStorage.setItem("language", newLanguage); // Store in localStorage
+    const langCode = language === "en" ? "jp" : "en";
+    setLanguage(langCode);
+    changeLanguage(langCode);
+    console.log(langCode);
+    localStorage.setItem("language", langCode);
   };
 
   return (
@@ -87,22 +88,32 @@ const NavBar = ({ active, setActive }) => {
           </li>
 
           {/* Language Toggle */}
-          {/* <li className="cursor-pointer group relative" onClick={handleLanguageToggle}>
+          <li
+            className="cursor-pointer group relative"
+            onClick={() => {
+              handleLanguageToggle();
+            }}
+          >
             <LanguageIcon color={"#fff"} />
             <div className="absolute top-full mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {language === "en" ? (
-                <img src={Uk} alt="English" className="w-6" />
-              ) : (
                 <img src={Jp} alt="日本語" className="w-6" />
+              ) : (
+                <img src={Uk} alt="English" className="w-6" />
               )}
             </div>
-          </li> */}
+          </li>
         </ul>
       </div>
 
       {/* Mobile Menu Icon */}
       <div className="md:hidden">
-        <button onClick={handleMenuToggle} className="text-xl">
+        <button
+          onClick={handleMenuToggle}
+          className={`text-xl ${
+            !menuOpen && "border border-white "
+          }rounded-md px-2 py-1`}
+        >
           {menuOpen ? "X" : "☰"}
         </button>
       </div>
@@ -110,7 +121,7 @@ const NavBar = ({ active, setActive }) => {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-start absolute top-14 left-0 w-full p-4 space-y-4 bg-[#303030d9]">
-          <ul className="flex flex-row justify-between items-center space-x-10">
+          <ul className={`flex flex-row space-x-10`}>
             <li
               className={`${
                 active === "home" ? "text-blue-400" : ""
@@ -126,7 +137,7 @@ const NavBar = ({ active, setActive }) => {
             <li
               className={`${
                 active === "work" ? "text-blue-400" : ""
-              } cursor-pointer`}
+              } cursor-pointer place-items-center`}
               onClick={() => {
                 setActive("work");
                 handleMenuToggle();
@@ -138,7 +149,7 @@ const NavBar = ({ active, setActive }) => {
             <li
               className={`${
                 active === "blog" ? "text-blue-400" : ""
-              } cursor-pointer`}
+              } cursor-pointer place-items-center`}
               onClick={() => {
                 setActive("blog");
                 handleMenuToggle();
@@ -148,10 +159,16 @@ const NavBar = ({ active, setActive }) => {
               <p>{t("blog")}</p>
             </li>
 
-            {/* <li className="cursor-pointer" onClick={handleLanguageToggle}>
+            <li
+              className="cursor-pointer place-items-center"
+              onClick={() => {
+                handleMenuToggle();
+                handleLanguageToggle();
+              }}
+            >
               <LanguageIcon color={"#fff"} />
               <p>{language === "en" ? "日本語" : "English"}</p>
-            </li> */}
+            </li>
           </ul>
         </div>
       )}

@@ -1,30 +1,32 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import Modal from "react-modal";
-import XcloseIcon from "../assets/icons/XcloseIcon";
-import "../styles/modal.css";
 
 //json data
-
-import Events from "../data/Events.json";
-import LocationIcon from "../assets/icons/LocationIcon";
+import LocationIcon from "../../assets/icons/LocationIcon";
 
 const Blog = () => {
-  let subtitle;
-  const [modalVisible, setModalVisible] = useState(false);
-  const [newEvent, setNewEvent] = useState(null);
+  const langCode = localStorage.getItem("language") || "en";
 
-  const toggleModal = () => {
-    setModalVisible(!modalVisible);
+  const [textData, setTextData] = useState();
+  const langMap = {
+    en: () => import("./Languages/english.json"),
+    jp: () => import("./Languages/japanese.json"),
   };
 
-  const ModalContent = ({ events }) => {
-    if (!events) return null;
-    console.log("modal", events);
-    return <></>;
-  };
+  useEffect(() => {
+    const loadLanguageText = async () => {
+      const loadText = (await langMap[langCode]) || langMap.en;
+      try {
+        const text = await loadText();
+        setTextData(text);
+        console.log(text);
+      } catch (error) {
+        console.error("Error Loading langauge FILE", error);
+      }
+    };
 
+    loadLanguageText();
+  }, [langCode, textData]);
   return (
     <section
       style={{
@@ -33,10 +35,10 @@ const Blog = () => {
         minHeight: "70vh",
       }}
     >
-      <p className="text-center text-xl">Social Networks</p>
+      <p className="text-center text-xl">{textData?.socialNetwork}</p>
 
       <div className="lg:grid lg:grid-cols-4 place-items-center">
-        {Events.map((event, index) => (
+        {textData?.events.map((event, index) => (
           <div className="p-5" key={index}>
             <div className="border border-[#ffffff7a] rounded-md p-3">
               <div className="flex flex-row justify-between">
@@ -49,7 +51,7 @@ const Blog = () => {
                 <img
                   src={event.eventLogo}
                   alt="event logo"
-                  className="w-3/12 rounded-lg border border-[#ffffff50]"
+                  className="w-3/12 h-auto rounded-lg border border-[#ffffff50]"
                 />
               </div>
               <div className="flex flex-row justify-between items-center mt-2">
@@ -59,16 +61,17 @@ const Blog = () => {
                 </div>
                 <a
                   href={event.externalLink}
+                  target="_blank"
                   className="cursor-pointer border border-[#ffffff68] w-fit px-2 py-1 rounded-md mt-2 place-items-end"
+                  rel="noreferrer"
                 >
-                  More info
+                  {textData?.moreInfo}
                 </a>
               </div>
             </div>
           </div>
         ))}
       </div>
-      {/* <ModalContent event={event} /> */}
     </section>
   );
 };
