@@ -25,21 +25,6 @@ const NavBar = ({ active, setActive }) => {
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
-  const languageList = [
-    {
-      code: "en",
-      languageName: "English",
-    },
-    {
-      code: "jp",
-      languageName: "日本語",
-    },
-    {
-      code: "ta",
-      languageName: "தமிழ்",
-    },
-  ];
-
   const handleLanguageToggle = () => {
     const langCode = language === "en" ? "jp" : "en";
     setLanguage(langCode);
@@ -135,11 +120,11 @@ const NavBar = ({ active, setActive }) => {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-start absolute top-14 left-0 w-full p-4 space-y-4 bg-[#303030d9]">
-          <ul className={`flex flex-row space-x-10`}>
+          <ul className={`flex flex-row w-full`}>
             <li
               className={`${
                 active === "home" ? "text-blue-400" : ""
-              } cursor-pointer place-items-center`}
+              } cursor-pointer place-items-center w-1/4`}
               onClick={() => {
                 setActive("home");
                 handleMenuToggle();
@@ -151,7 +136,7 @@ const NavBar = ({ active, setActive }) => {
             <li
               className={`${
                 active === "work" ? "text-blue-400" : ""
-              } cursor-pointer place-items-center`}
+              } cursor-pointer place-items-center w-1/4`}
               onClick={() => {
                 setActive("work");
                 handleMenuToggle();
@@ -163,7 +148,7 @@ const NavBar = ({ active, setActive }) => {
             <li
               className={`${
                 active === "blog" ? "text-blue-400" : ""
-              } cursor-pointer place-items-center`}
+              } cursor-pointer place-items-center w-1/4`}
               onClick={() => {
                 setActive("blog");
                 handleMenuToggle();
@@ -174,7 +159,7 @@ const NavBar = ({ active, setActive }) => {
             </li>
 
             <li
-              className="cursor-pointer place-items-center"
+              className="cursor-pointer place-items-center w-1/4"
               onClick={() => {
                 handleMenuToggle();
                 handleLanguageToggle();
