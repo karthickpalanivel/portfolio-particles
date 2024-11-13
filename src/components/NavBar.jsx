@@ -25,7 +25,21 @@ const NavBar = ({ active, setActive }) => {
 
   const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
-  // Function to toggle language
+  const languageList = [
+    {
+      code: "en",
+      languageName: "English",
+    },
+    {
+      code: "jp",
+      languageName: "日本語",
+    },
+    {
+      code: "ta",
+      languageName: "தமிழ்",
+    },
+  ];
+
   const handleLanguageToggle = () => {
     const langCode = language === "en" ? "jp" : "en";
     setLanguage(langCode);

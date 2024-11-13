@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 //json data
 import LocationIcon from "../../assets/icons/LocationIcon";
 
 const Blog = () => {
+  const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
@@ -14,6 +16,7 @@ const Blog = () => {
   };
 
   useEffect(() => {
+    console.log(langCode);
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
       try {
@@ -26,7 +29,7 @@ const Blog = () => {
     };
 
     loadLanguageText();
-  }, [langCode, textData]);
+  }, [langCode]);
   return (
     <section
       style={{

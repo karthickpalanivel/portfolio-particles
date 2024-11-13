@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 //icons
 import XcloseIcon from "../../assets/icons/XcloseIcon";
@@ -8,6 +9,7 @@ import "../../styles/modal.css";
 import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
+  const { t } = useTranslation();
   const [selectProject, setSelectProject] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -36,7 +38,7 @@ const Work = () => {
     };
 
     loadLanguageText();
-  }, [langCode, textData]);
+  }, [langCode]);
 
   return (
     <>

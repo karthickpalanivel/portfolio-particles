@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Face from "../../assets/images/face.png";
-
+import { useTranslation } from "react-i18next";
 const Home = () => {
+  const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
@@ -24,7 +25,7 @@ const Home = () => {
       }
     };
     loadLanguageText();
-  }, [langCode, textData]);
+  }, [langCode]);
 
   return (
     <>
