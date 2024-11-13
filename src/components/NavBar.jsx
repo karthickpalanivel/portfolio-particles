@@ -120,7 +120,7 @@ const NavBar = ({ active, setActive }) => {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-start absolute top-14 left-0 w-full p-4 space-y-4 bg-[#303030d9]">
-          <ul className={`flex flex-row w-full`}>
+          <ul className={`flex flex-row w-full items-center`}>
             <li
               className={`${
                 active === "home" ? "text-blue-400" : ""
@@ -165,8 +165,17 @@ const NavBar = ({ active, setActive }) => {
                 handleLanguageToggle();
               }}
             >
-              <LanguageIcon color={"#fff"} />
-              <p>{language === "en" ? "日本語" : "English"}</p>
+              {language === "en" ? (
+                <>
+                  <img src={Jp} alt="japanFlag" className="w-2/6 object-fill" />
+                  <p>日本語</p>
+                </>
+              ) : (
+                <>
+                  <img src={Uk} alt="UkFlag" className="w-2/6" />
+                  <p>English</p>
+                </>
+              )}
             </li>
           </ul>
         </div>
