@@ -37,7 +37,7 @@ const Home = () => {
 
         <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
           <div className="max-sm:w-9/12">
-            <p className="text-[#fff] lg:text-4xl max-sm:text-xl lg:my-5 max-sm:mt-5">
+            <p className={`text-[#fff] ${langCode === 'en' ? "lg:text-4xl" : "lg:text-2xl"} max-sm:text-xl lg:my-5 max-sm:mt-5`}>
               {textData?.greeting}{" "}
               <span className="font-bold">{textData?.name}</span>
             </p>

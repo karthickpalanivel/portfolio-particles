@@ -110,10 +110,10 @@ const NavBar = ({ active, setActive }) => {
         <button
           onClick={handleMenuToggle}
           className={`text-xl ${
-            !menuOpen && "border border-white "
-          }rounded-md px-2 py-1`}
+            !menuOpen ? "border border-white rounded-md py-1 px-2" : "mr-3"
+          }`}
         >
-          {menuOpen ? "X" : "☰"}
+          {menuOpen ? "x" : "☰"}
         </button>
       </div>
 

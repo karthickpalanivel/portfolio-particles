@@ -45,7 +45,7 @@ const Blog = () => {
           <div className="p-5" key={index}>
             <div className="border border-[#ffffff7a] rounded-md p-3">
               <div className="flex flex-row justify-between">
-                <div className="w-1/2">
+                <div className="w-4/6">
                   <p>{event.event}</p>
                   <p>{event.category}</p>
                   <p className="italic">{event.eventDate}</p>

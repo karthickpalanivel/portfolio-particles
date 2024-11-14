@@ -63,7 +63,7 @@ const Work = () => {
                   <h1 className="w-1/2 text-xl underline max-sm:mb-2">
                     {project.title}
                   </h1>
-                  <p className="my-1">{project.category}</p>
+                  <p className="my-1 text-right">{project.category}</p>
                 </div>
 
                 <div className="mt-2 lg:flex flex-row justify-between">
@@ -78,10 +78,25 @@ const Work = () => {
                   </div>
                 </div>
 
-                <p className="my-1">
-                  <span>{textData?.description} </span>
+                <p className={`my-1 ${langCode === "en" && "italic"}`}>
+                  {/* <span>{textData?.description} </span> */}
                   {project.shortDescription}
                 </p>
+
+                {/* technologies and modal trigger */}
+                <div className="lg:flex lg:flex-wrap justify-between items-center">
+                  <div className="flex flex-wrap items-center">
+                    {/* <p className="mr-2">Tech Stack: </p> */}
+                    {project.technologies.map((items) => (
+                      <div
+                        key={items}
+                        className="mr-3 my-2 py-1 px-2 w-fit h-fit border border-white rounded-full"
+                      >
+                        <p className="text-xs text-center">{items}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 {/* project buttons */}
                 <div className="my-4">
@@ -119,25 +134,12 @@ const Work = () => {
                       {textData?.externalLink}
                     </a>
                   )}
-                </div>
 
-                {/* technologies and modal trigger */}
-                <div className="lg:flex lg:flex-row justify-between items-center">
-                  <div className="w-10/12 lg:flex lg:flex-row">
-                    {project.technologies.map((items) => (
-                      <div
-                        key={items}
-                        className="mr-3 my-2 py-1 px-2 w-fit h-fit border border-white rounded-full"
-                      >
-                        <p className="text-xs text-center">{items}</p>
-                      </div>
-                    ))}
-                  </div>
                   <p
-                    className="cursor-pointer w-fit border border-white rounded-md px-2 py-1"
+                    className="cursor-pointer w-fit border my-4 border-white rounded-md px-2 py-1"
                     onClick={() => {
                       setSelectProject(project);
-                      setModalVisible(true); // Show modal
+                      setModalVisible(true);
                     }}
                   >
                     {textData?.readMore}

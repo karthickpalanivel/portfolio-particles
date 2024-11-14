@@ -17,7 +17,7 @@
       "workedMode": "Junior Software Engineer @ VTS Enterprises India Pvt. Ltd.,",
       "description": [
         "I played a pivotal role in developing the B2B HUB INDIA mobile app using React Native.",
-        "He built critical screens like Welcome, Onboarding (with language selection stored in AsyncStorage), Registration, Home, and Profile.",
+        "Built critical screens like Welcome, Onboarding (with language selection stored in AsyncStorage), Registration, Home, and Profile.",
         "I also implemented multi-language support using i18Next and useContext for four languages",
         "Multi-language support increased usage across cities and regions of India 70%, and developed key features like product details, order summary with invoice generation, and seamless data navigation for sellers."
       ],
