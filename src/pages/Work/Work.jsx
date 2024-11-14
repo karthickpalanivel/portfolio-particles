@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -186,7 +187,7 @@ const Work = () => {
           {textData?.proficiencies}
         </p>
         {/* skills */}
-        <div className="lg:flex lg:flex-row grid grid-cols-3 items-center justify-center">
+        <div className="lg:flex lg:flex-wrap grid grid-cols-3 items-center justify-center">
           {textData?.skills.map((skills, index) => (
             <div
               key={index}
