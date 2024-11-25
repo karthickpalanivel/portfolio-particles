@@ -33,13 +33,11 @@ const Home = () => {
         style={{ color: "#fff", fontFamily: "poppins, sans-serif" }}
         className="flex flex-col justify-center items-center max-sm:w-full"
       >
-        {/* style={{ ...styles, padding: "20px", minHeight: "100vh" }} */}
-
         <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
           <div className="max-sm:w-9/12">
-            <p className={`text-[#fff] ${langCode === 'en' ? "lg:text-4xl" : "lg:text-2xl"} max-sm:text-xl lg:my-5 max-sm:mt-5`}>
+            <p className={`${langCode === 'en' ? "lg:text-4xl" : "lg:text-2xl"} max-sm:text-xl lg:my-5 max-sm:mt-5`}>
               {textData?.greeting}{" "}
-              <span className="font-bold">{textData?.name}</span>
+              <span className="font-bold underline">{textData?.name}</span>
             </p>
             <p className="lg:text-2xl max-sm:mb-8 sm:text-center">
               {textData?.title}
@@ -66,9 +64,9 @@ const Home = () => {
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
           <a
-            href="https://drive.google.com/file/d/1diPYc134OSVa5Xof3FQSrsuxv8U4G7C0/view?usp=sharing"
+            href="https://drive.google.com/drive/folders/1_EI-DzhH-kzUvejiO3qs0dVYe6XwS5pc?usp=sharing"
             target="_blank"
-            className="border text-center border-white px-6 py-2 rounded-md mx-10 transition-all hover:bg-white hover:text-[#000000] hover:shadow-lg hover:px-8"
+            className="border text-center border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
             rel="noreferrer"
           >
             {textData?.resume}
@@ -77,7 +75,7 @@ const Home = () => {
             href="https://linktr.ee/KarthickPalanivel"
             target="_blank"
             rel="noreferrer"
-            className="max-sm:my-4 border text-center border-white px-6 py-2 rounded-md mx-10 transition-all hover:bg-white hover:text-[#000000] hover:shadow-lg hover:px-8"
+            className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.contact}
           </a>

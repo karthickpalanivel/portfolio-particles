@@ -5,6 +5,8 @@ import HomeIcon from "../assets/icons/HomeIcon";
 import WorkIcon from "../assets/icons/WorkIcon";
 import BlogIcon from "../assets/icons/BlogIcon";
 import LanguageIcon from "../assets/icons/LanguageIcon";
+import MoonIcon from "../assets/icons/MoonIcon";
+import SunIcon from "../assets/icons/SunIcon";
 
 // Images
 import Ind from "../assets/images/flag-in.png";
@@ -16,9 +18,13 @@ import { useTranslation } from "react-i18next";
 import { changeLanguage } from "../locale/i18n";
 
 const NavBar = ({ active, setActive }) => {
+  const theme = localStorage.getItem("theme") || true;
+
   const [language, setLanguage] = useState(
     localStorage.getItem("language") || "en"
   );
+
+  const [darkMode, setDarkMode] = useState(theme);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { t } = useTranslation();
@@ -34,7 +40,10 @@ const NavBar = ({ active, setActive }) => {
   };
 
   return (
-    <div className="flex justify-between items-center p-4 text-[#fff]">
+    <div
+      className="flex justify-between items-center p-4"
+      style={{ color: "#fff" }}
+    >
       {/* Left Section */}
       <div
         className="flex space-x-3 flex-row justify-center cursor-pointer"
@@ -101,6 +110,22 @@ const NavBar = ({ active, setActive }) => {
                 <img src={Uk} alt="English" className="w-6" />
               )}
             </div>
+          </li>
+          <li
+            onClick={() => {
+              setDarkMode((prev) => {
+                const newMode = !prev;
+                localStorage.setItem("theme", newMode.toString());
+                console.log(newMode);
+                return newMode;
+              });
+            }}
+          >
+            {/* {darkMode ? (
+              <SunIcon colors={"#fff"} />
+            ) : (
+              <MoonIcon colors={"#000"} />
+            )} */}
           </li>
         </ul>
       </div>
@@ -175,6 +200,22 @@ const NavBar = ({ active, setActive }) => {
                   <img src={Uk} alt="UkFlag" className="w-2/6" />
                   <p>English</p>
                 </>
+              )}
+            </li>
+            <li
+              onClick={() => {
+                setDarkMode((prev) => {
+                  const newMode = !prev;
+                  localStorage.setItem("theme", newMode.toString());
+                  console.log(newMode);
+                  return newMode;
+                });
+              }}
+            >
+              {darkMode ? (
+                <SunIcon colors={"#fff"} />
+              ) : (
+                <MoonIcon colors={"#000"} />
               )}
             </li>
           </ul>

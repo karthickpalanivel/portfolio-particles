@@ -9,7 +9,7 @@ const MoonIcon = ({ color }) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke={color}
-        className="size-6"
+        className="size-6 moon"
       >
         <path
           strokeLinecap="round"

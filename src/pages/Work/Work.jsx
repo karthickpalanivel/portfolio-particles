@@ -47,6 +47,7 @@ const Work = () => {
         style={{
           color: "#fff",
           fontFamily: "poppins, sans-serif",
+          overflowX: "hidden",
         }}
         className="lg:p-2/12"
       >

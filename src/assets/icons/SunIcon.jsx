@@ -1,6 +1,6 @@
 import React from "react";
 
-const ArrowRightIcon = ({ colors }) => {
+const SunIcon = ({ colors }) => {
   return (
     <div>
       <svg
@@ -9,16 +9,16 @@ const ArrowRightIcon = ({ colors }) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke={colors}
-        className="size-6"
+        className="size-6 sun" 
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+          d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
         />
       </svg>
     </div>
   );
 };
 
-export default ArrowRightIcon;
+export default SunIcon;
