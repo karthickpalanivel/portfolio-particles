@@ -11,6 +11,22 @@
   "category": "Category",
   "projects": [
     {
+      "title": "Harbour for Students",
+      "year": "November 2024",
+      "workedMode": "Contributor as SDE @ Web3Chennai Community",
+      "shortDescription": "Let's the student becomes sailors",
+      "description": [
+        "Harbour is a mobile app designed to empower college students to lead community initiatives, select leaders among themselves",
+        "participating in various initiatives, and make decisions through a democratic voting process under blockchain DAO System.",
+        "This application is structured to metaphorically represent a nautical theme, enhancing user engagement through familiar maritime concepts."
+      ],
+      "technologies": ["React-Native", "TypeScript", "Blockchain DAO"],
+      "category": "Mobile-Application",
+      "githubLink": "https://github.com/karthickpalanivel/Harbour-for-Students.git",
+      "socialLink": "https://x.com/0xharbourapp",
+      "demoLink": null
+    },
+    {
       "title": "B2B-Hub India",
       "year": "August 2024",
       "shortDescription": "Connecting pulse industry of India",
@@ -41,6 +57,22 @@
       "technologies": ["React-Native", "Redux", "Node js", "MySql"],
       "category": "Mobile-Application",
       "githubLink": null,
+      "socialLink": null,
+      "demoLink": null
+    },
+    {
+      "title": "The Bridge",
+      "year": "April 2024",
+      "shortDescription": "A crosslink crypto exchange platform",
+      "description": [
+        "To encourage the usage of cryptocurrency and act as a communication bridge between one network to another network",
+        "To help the large-scale business transactions on the respective chain",
+        "Build an application to make large scale and international transaction by everyone",
+        "Solana Foundation’s Bridging protocol name wormhole that communicates in between network relay chains."
+      ],
+      "technologies":["React Js", "Wormhole Protocol", "Solana Blockchain"],
+      "category":"Web-3 Application",
+      "githubLink": "https://github.com/karthickpalanivel/BridgePlatform.git",
       "socialLink": null,
       "demoLink": null
     },
@@ -77,7 +109,6 @@
       "socialLink": "https://devfolio.co/projects/rhino-rewards-59ca",
       "demoLink": "https://www.youtube.com/watch?v=GIO8qZQ2QA4&t=3s"
     },
-
     {
       "title": "Library Systems",
       "year": "April 2023",

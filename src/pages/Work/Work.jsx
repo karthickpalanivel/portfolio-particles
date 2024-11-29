@@ -11,6 +11,7 @@ import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
   const { t } = useTranslation();
+  const [showAllProject, setShowAllProject] = useState(true);
   const [selectProject, setSelectProject] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -41,6 +42,10 @@ const Work = () => {
     loadLanguageText();
   }, [langCode]);
 
+  const projectDisplay = () => {
+    setShowAllProject(!showAllProject);
+  };
+
   return (
     <>
       <section
@@ -69,20 +74,24 @@ const Work = () => {
                 </div>
 
                 <div className="mt-2 lg:flex flex-row justify-between">
-                  <div className="flex flex-row space-x-3 items-center">
-                    <OrganizationIcon colors={"#fff"} />
-                    <p className="text-sm">{project.workedMode}</p>
-                  </div>
+                  {project?.workedMode ? (
+                    <div className="flex flex-row space-x-3 items-center">
+                      <OrganizationIcon colors={"#fff"} />
+                      <p className="text-sm">{project?.workedMode}</p>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
 
                   <div className="flex flex-row space-x-3 items-center max-sm:my-2">
                     <BlogIcon />
-                    <p className="text-right italic">{project.year}</p>
+                    <p className="text-right italic">{project?.year}</p>
                   </div>
                 </div>
 
                 <p className={`my-1 ${langCode === "en" && "italic"}`}>
                   {/* <span>{textData?.description} </span> */}
-                  {project.shortDescription}
+                  {project?.shortDescription}
                 </p>
 
                 {/* technologies and modal trigger */}

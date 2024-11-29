@@ -11,6 +11,22 @@
   "category": "種類",
   "projects": [
     {
+      "title": "Harbour for Students",
+      "year": "2024年11月",
+      "workedMode": "Web3ChennaiコミュニティのSDEとして貢献",
+      "shortDescription": "学生が船員になるためのプラットフォーム",
+      "description": [
+        "ハーバーは大学生がコミュニティのイニシアチブを主導し、リーダーを選出するためのモバイルアプリです",
+        "さまざまなイニシアチブに参加し、ブロックチェーンDAOシステムを通じて民主的な投票プロセスで意思決定を行う",
+        "このアプリケーションは親しみやすい海洋テーマをメタファーとして表現することで、ユーザーエンゲージメントを向上させる"
+      ],
+      "technologies": ["React-Native", "TypeScript", "Blockchain DAO"],
+      "category": "モバイルアプリケーション",
+      "githubLink": "https://github.com/karthickpalanivel/Harbour-for-Students.git",
+      "socialLink": "https://x.com/0xharbourapp",
+      "demoLink": null
+    },
+    {
       "title": "B2B-Hub India",
       "year": "2024年8月",
       "shortDescription": "インドのパルス産業を繋ぐ",
@@ -45,6 +61,26 @@
       "demoLink": null
     },
     {
+      "title": "The Bridge",
+      "year": "2024年4月",
+      "shortDescription": "クロスリンク仮想通貨交換プラットフォーム",
+      "description": [
+        "仮想通貨の使用を促進し、ネットワーク間のコミュニケーションブリッジとして機能する",
+        "それぞれのチェーンで大規模なビジネス取引をサポートする",
+        "誰もが国際的および大規模な取引を行えるアプリケーションを構築する",
+        "Solana Foundationのブリッジングプロトコル「Wormhole」は、ネットワークリレーチェーン間での通信を可能にする"
+      ],
+      "technologies": [
+        "React Js",
+        "Wormholeプロトコル",
+        "Solanaブロックチェーン"
+      ],
+      "category": "Web-3アプリケーション",
+      "githubLink": "https://github.com/karthickpalanivel/BridgePlatform.git",
+      "socialLink": null,
+      "demoLink": null
+    },
+    {
       "title": "AI Helps",
       "year": "2024年3月",
       "shortDescription": "AIによる画像解決策で24/7顧客の問い合わせに応答",
@@ -61,6 +97,7 @@
       "socialLink": null,
       "demoLink": null
     },
+
     {
       "title": "Rhino-Rewards",
       "year": "2023年9月",

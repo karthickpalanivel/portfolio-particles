@@ -23,13 +23,15 @@ function App() {
   return (
     <>
       <ParticlesComponent id="particle-js" />
-      <NavBar active={active} setActive={handleTabChange} />
-      <div style={{ minHeight: "fit-content" }}>
-        {active === "home" && <Home />}
-        {active === "work" && <Work />}
-        {active === "blog" && <Blog />}
-      </div>
-      <Footer />
+      {/* <div style={{backgroundColor: "#000", minHeight:"100vh"}}> */}
+        <NavBar active={active} setActive={handleTabChange} />
+        <div style={{ minHeight: "fit-content" }}>
+          {active === "home" && <Home />}
+          {active === "work" && <Work />}
+          {active === "blog" && <Blog />}
+        </div>
+        <Footer />
+      {/* </div> */}
     </>
   );
 }
