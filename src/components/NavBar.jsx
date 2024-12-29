@@ -202,7 +202,7 @@ const NavBar = ({ active, setActive }) => {
                 </>
               )}
             </li>
-            <li
+{/*             <li
               onClick={() => {
                 setDarkMode((prev) => {
                   const newMode = !prev;
@@ -217,7 +217,7 @@ const NavBar = ({ active, setActive }) => {
               ) : (
                 <MoonIcon colors={"#000"} />
               )}
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
