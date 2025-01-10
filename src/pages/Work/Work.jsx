@@ -25,6 +25,7 @@ const Work = () => {
   const langMap = {
     en: () => import("./Languages/english.json"),
     jp: () => import("./Languages/japanese.json"),
+    ta: () => import("./Languages/Tamil.json"),
   };
 
   useEffect(() => {
@@ -41,10 +42,6 @@ const Work = () => {
 
     loadLanguageText();
   }, [langCode]);
-
-  const projectDisplay = () => {
-    setShowAllProject(!showAllProject);
-  };
 
   return (
     <>

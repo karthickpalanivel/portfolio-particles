@@ -48,7 +48,7 @@ const Home = () => {
 
         {/* 🇯🇵🇬🇧 about me */}
 
-        <p className="lg:pt-10 lg:px-60 max-sm:px-5 max-sm:my-4 text-lg min-lg:text-center">
+        <p className="lg:pt-10 lg:px-60 max-sm:px-5 max-sm:my-4 text-lg text-center">
           {textData?.versatile}{" "}
           <span className="bg-gradient-to-r from-[#ff3535] via-[#e79a9a] to-[#3e3eb7] px-1 rounded-sm text-transparent bg-clip-text underline ">
             {textData?.bilingual}
@@ -78,6 +78,14 @@ const Home = () => {
             className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.contact}
+          </a>
+          <a
+            href="https://calendly.com/karthickpalanivelit/30min"
+            target="_blank"
+            rel="noreferrer"
+            className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+          >
+            {textData?.bookings}
           </a>
         </div>
 
