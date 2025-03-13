@@ -134,6 +134,10 @@
   ],
   "skills": [
     {
+      "imageName": "ネクスト Js",
+      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1741873907/nextjs_iegwpx.png"
+    },
+    {
       "imageName": "リアクト",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/react_d2degg.png"
     },
