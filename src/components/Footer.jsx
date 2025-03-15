@@ -18,6 +18,9 @@ const Footer = () => {
     jp: () => import("./Languages/japanese.json"),
   };
 
+
+  const date = new Date();
+  const year = date.getFullYear();
   useEffect(() => {
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
@@ -102,7 +105,7 @@ const Footer = () => {
         </div>
 
         <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
-          {textData?.footer}
+          {textData?.footer} &copy; {year}{textData?.rights}
         </div>
       </footer>
     </>
