@@ -169,10 +169,10 @@
       "imageName": "Graph QL",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731145031/GraphQL_ppyybr.png"
     },
-    {
-      "imageName": "MySQL",
-      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/mysql_ue29sb.png"
-    },
+//    {
+//      "imageName": "MySQL",
+//      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/mysql_ue29sb.png"
+//    },
     {
       "imageName": "Postgresql",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/postgresql_lsaxz1.png"
