@@ -35,7 +35,11 @@ const Home = () => {
       >
         <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
           <div className="max-sm:w-9/12">
-            <p className={`${langCode === 'en' ? "lg:text-4xl" : "lg:text-2xl"} max-sm:text-xl lg:my-5 max-sm:mt-5`}>
+            <p
+              className={`${
+                langCode === "en" ? "lg:text-4xl" : "lg:text-2xl"
+              } max-sm:text-xl lg:my-5 max-sm:mt-5`}
+            >
               {textData?.greeting}{" "}
               <span className="font-bold underline">{textData?.name}</span>
             </p>
@@ -78,6 +82,14 @@ const Home = () => {
             className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.contact}
+          </a>
+          <a
+            href="https://topmate.io/karthick_palanivel/"
+            target="_blank"
+            rel="noreferrer"
+            className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+          >
+            {textData.topmate}
           </a>
           <a
             href="https://calendly.com/karthickpalanivelit/30min"

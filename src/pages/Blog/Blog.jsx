@@ -65,7 +65,7 @@ const Blog = () => {
                 <a
                   href={event.externalLink}
                   target="_blank"
-                  className="cursor-pointer border border-[#ffffff68] w-fit px-2 py-1 rounded-md mt-2 place-items-end"
+                  className="cursor-pointer border border-[#ffffff68] w-3/5 text-center px-2 py-1 rounded-md mt-2 place-items-end"
                   rel="noreferrer"
                 >
                   {textData?.moreInfo}
