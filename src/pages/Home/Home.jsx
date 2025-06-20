@@ -89,7 +89,7 @@ const Home = () => {
             rel="noreferrer"
             className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
-            {textData.topmate}
+            {/* {textData.} */}TopMate
           </a>
           <a
             href="https://calendly.com/karthickpalanivelit/30min"
