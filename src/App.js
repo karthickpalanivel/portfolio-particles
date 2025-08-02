@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 //components
 import ParticlesComponent from "./components/Particles";

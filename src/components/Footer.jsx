@@ -7,15 +7,15 @@ import GitHubIcon from "../assets/icons/GitHubIcon";
 import TwitterIcon from "../assets/icons/TwitterIcon";
 import MailIcon from "../assets/icons/MailIcon";
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 const Footer = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
   const langMap = {
     en: () => import("./Languages/english.json"),
-    jp: () => import("./Languages/japanese.json"),
+    jp: () => import("./Languages/japanese.json")
   };
 
 
