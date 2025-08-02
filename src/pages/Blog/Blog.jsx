@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from "react";
-
+import { useTranslation } from "react-i18next";
 //json data
 import LocationIcon from "../../assets/icons/LocationIcon";
 
 const Blog = () => {
+  const {t} = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
@@ -52,18 +53,18 @@ const Blog = () => {
                 <img
                   src={event.eventLogo}
                   alt="event logo"
-                  className="w-3/12 h-auto rounded-lg border border-[#ffffff50]"
+                  className="w-4/12 h-auto rounded-lg border border-[#ffffff50]"
                 />
               </div>
               <div className="flex flex-row justify-between items-center mt-2">
-                <div className="flex flex-row">
+                <div className="flex flex-row w-1/2">
                   <LocationIcon />
                   <p className="ml-2">{event.location}</p>
                 </div>
                 <a
                   href={event.externalLink}
                   target="_blank"
-                  className="cursor-pointer border border-[#ffffff68] w-3/5 text-center px-2 py-1 rounded-md mt-2 place-items-end"
+                  className="cursor-pointer border border-[#ffffff68] w-1/2 text-center px-2 py-1 rounded-md mt-2 place-items-end"
                   rel="noreferrer"
                 >
                   {textData?.moreInfo}

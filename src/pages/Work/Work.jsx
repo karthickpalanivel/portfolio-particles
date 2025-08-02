@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 //icons
 import XcloseIcon from "../../assets/icons/XcloseIcon";
@@ -10,7 +11,7 @@ import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
  
-
+  const {t} = useTranslation();
   const [modalVisible, setModalVisible] = useState(false);
   const [selectProject, setSelectProject] = useState(null); // Re-added 'selectProject' state
 

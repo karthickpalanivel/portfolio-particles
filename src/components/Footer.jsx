@@ -7,9 +7,9 @@ import GitHubIcon from "../assets/icons/GitHubIcon";
 import TwitterIcon from "../assets/icons/TwitterIcon";
 import MailIcon from "../assets/icons/MailIcon";
 import { useState, useEffect } from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
 
         <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
-          {textData?.footer} &copy; {year}{textData?.rights}
+          {textData?.footer} &copy; {year}
         </div>
       </footer>
     </>

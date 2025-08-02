@@ -1,8 +1,8 @@
-// Blog, short intro
-
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
 import Face from "../../assets/images/face.png";
 const Home = () => {
+  const {t} = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
