@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 
 //icons
 import XcloseIcon from "../../assets/icons/XcloseIcon";
