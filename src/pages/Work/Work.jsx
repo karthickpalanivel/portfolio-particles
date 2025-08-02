@@ -11,16 +11,20 @@ import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
  
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+
+  const langCode = localStorage.getItem("language") || "en";
+
   const [modalVisible, setModalVisible] = useState(false);
-  const [selectProject, setSelectProject] = useState(null); // Re-added 'selectProject' state
+  const [selectProject, setSelectProject] = useState(null);
+  const [projectFilter, setProjectFilter] = useState(-1); // -1 for "All" projects
+  const [filteredProjects, setFilteredProjects] = useState([]);
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
   };
 
-  const langCode = localStorage.getItem("language") || "en";
-
+  
   const [textData, setTextData] = useState();
 
   useEffect(() => {
@@ -35,6 +39,7 @@ const Work = () => {
       try {
         const text = await loadText();
         setTextData(text);
+        setFilteredProjects(text.projects);
         //console.log(text);
       } catch (error) {
         console.error("Error Loading langauge FILE", error);
@@ -44,46 +49,78 @@ const Work = () => {
     loadLanguageText();
   }, [langCode]);
 
+  useEffect(() => {
+    if (textData && textData.projects) {
+      if (projectFilter === -1) {
+        // Show all projects when filter is -1
+        setFilteredProjects(textData.projects);
+      } else {
+        // Filter projects based on selected category
+        const selectedCategory = textData.categories[projectFilter];
+        const filtered = textData.projects.filter(
+          (project) => project.selectCategory === selectedCategory
+        );
+        setFilteredProjects(filtered);
+      }
+    }
+  }, [projectFilter, textData]);
+
   return (
     <>
       <section className="text-white font-poppins min-h-[70vh] flex flex-col items-center px-4 sm:px-8 lg:px-16">
-        <p className="text-center underline text-2xl my-5">
+        <p className="text-center underline text-2xl mt-5 mb-3">
           {textData?.developments}
         </p>
 
+        {/* category selection */}
+        <div className="lg:flex flex-row my-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-2">
+          <div
+            className={`border mx-2 max-sm:my-2 text-center rounded-2xl px-3 py-1 cursor-pointer ${
+              projectFilter === -1
+                ? "bg-[#fff] text-[#000]"
+                : "bg-[#000] text-[#fff]"
+            }`}
+            onClick={() => setProjectFilter(-1)}
+          >
+            {langCode === "jp" ? "すべて" : "All"}
+          </div>
+          {textData?.categories.map((category, index) => (
+            <div
+              key={index}
+              className={`border mx-2 max-sm:my-2 text-center rounded-2xl px-3 py-1 cursor-pointer ${
+                index === projectFilter
+                  ? "bg-[#fff] text-[#000]"
+                  : "bg-[#000] text-[#fff]"
+              } ${langCode === "jp" ? "max-sm:text-sm" : ""}`}
+              onClick={() => setProjectFilter(index)}
+            >
+              {category}
+            </div>
+          ))}
+        </div>
+
         {/* projects */}
-        <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-5">
-          {textData?.projects.map((project, index) => (
+        <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 ">
+          {filteredProjects.map((project, index) => (
             <div className="lg:p-3 max-sm:py-3" key={index}>
               <div className="border border-white bg-[#7f7f7f21] rounded-md p-4 h-fit">
                 {/* project header */}
                 <div className="flex flex-row justify-between">
-                  <h1 className="w-1/2 text-xl underline max-sm:mb-2">
+                  <h1 className="text-xl underline max-sm:mb-2">
                     {project.title}
                   </h1>
-                  <p className="my-1 text-right">{project.category}</p>
-                </div>
-
-                <div className="mt-2 lg:flex flex-row justify-between">
-                  {project?.workedMode ? (
-                    <div className="flex flex-row space-x-3 items-center">
-                      <OrganizationIcon colors={"#fff"} />
-                      <p className="text-sm">{project?.workedMode}</p>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
-
-                  <div className="flex flex-row space-x-3 items-center max-sm:my-2">
-                    <BlogIcon />
+                  <div className="flex space-x-3 max-sm:my-2">
                     <p className="text-right italic">{project?.year}</p>
+                    <BlogIcon />
                   </div>
                 </div>
 
-                <p className={`my-1 ${langCode === "en" && "italic"}`}>
-                  {/* <span>{textData?.description} </span> */}
-                  {project?.shortDescription}
-                </p>
+                <div className="flex flex-row justify-between">
+                  <p className={`my-1 ${langCode === "en" && "italic"} w-2/3`}>
+                    {project?.shortDescription}
+                  </p>
+                  <p className="my-1 text-right">{project.category}</p>
+                </div>
 
                 {/* technologies and modal trigger */}
                 <div className="lg:flex lg:flex-wrap justify-between items-center">
@@ -104,11 +141,13 @@ const Work = () => {
                 <div className="my-4">
                   {project.demoLink === null &&
                     project.githubLink === null &&
-                    project.socialLink === null && <p>Links Adding soon</p>}
+                    project.socialLink === null && <p className="italic">Links Adding soon...</p>}
 
                   {project.demoLink && (
                     <a
                       href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-3 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer"
                     >
                       {textData?.demo}
@@ -118,6 +157,8 @@ const Work = () => {
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`${
                         project.demoLink ? "ml-5" : ""
                       } px-3 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer`}
@@ -129,6 +170,8 @@ const Work = () => {
                   {project.socialLink && (
                     <a
                       href={project.socialLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`${
                         project.demoLink || project.githubLink ? "ml-5" : ""
                       } px-2 py-1 text-[#fff] border rounded-md border-[#fff] cursor-pointer`}

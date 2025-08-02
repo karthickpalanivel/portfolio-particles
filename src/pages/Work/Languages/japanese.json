@@ -9,7 +9,59 @@
   "proficiencies": "スキル",
   "projectName": "プロジェットの名",
   "category": "種類",
+  "categories": ["ウェブアプリ", "モバイルアプリ", "データエンジニア"],
   "projects": [
+    
+  {
+    "title": "B2B Ecommerce Data Analytics",
+    "year": "2025年5月",
+    "workedMode": "フリーランサー",
+    "shortDescription": "顧客の選択がビジネスを推進する",
+    "description": [
+      "Azure Data Lakeを使ってデータ変換を最適化し、BIクエリのパフォーマンスを向上させ、ダッシュボードの読み込み時間を短縮しました。",
+      "Azure Synapseで自動スケーリングクラスタを導入し、ピークデータ負荷を処理して計算コストを削減しました。",
+      "Spark UIでブレークポイントを設定し、自動データ品質管理とデバッグを実装して、トランザクションエラーを減らし、レポートを改善しました。"
+    ],
+    "technologies": ["Azure Synapse Analytics", "Databricks", "Apache PySpark"],
+    "category": "データエンジニア",
+    "githubLink": "https://github.com/karthickpalanivel/",
+    "socialLink": null,
+    "demoLink": null,
+    "selectCategory": "データエンジニア"
+  },
+  {
+    "title": "Customer Support Chat Analytics",
+    "year": "2025年5月",
+    "shortDescription": "Spark変換でカスタマーサポートの問題を解決",
+    "description": [
+      "PythonとPostgreSQLを使ってETLパイプラインを構築し、毎月10万件以上のチャットログを処理して、レポート作成の速度と問題検出を改善しました。",
+      "プラットフォームのデータ量と処理要件に対応する内部フレームワークを維持しました。",
+      "Hadoop、HQL、Pythonを使って5万件以上のAIチャットデータを分析し、モデルの再学習を行って応答の正確さを向上させました。"
+    ],
+    "technologies": ["Hive", "Hadoop", "PySpark"],
+    "category": "データエンジニア",
+    "githubLink": "https://github.com/karthickpalanivel/",
+    "socialLink": null,
+    "demoLink": null,
+    "selectCategory": "データエンジニア"
+  },
+  {
+    "title": "Banking Analysis",
+    "year": "2025年4月",
+    "workedMode": "フリーランサー",
+    "shortDescription": "パーソナライズされた銀行インサイト",
+    "description": [
+      "Azure DatabricksでETLパイプラインを構築し、顧客の取引を処理してパーソナライズされた銀行インサイトのための主要な指標を導き出しました。",
+      "Azure Data Lake Storage Gen2とSynapse Analyticsを使って、月100万件のデータ量を処理できるスケーラブルなデータアーキテクチャを構築しました。",
+      "PySparkを使ってデータ変換と集計を実装し、顧客データの効率的なクエリと分析を可能にしました。"
+    ],
+    "technologies": ["React-Native", "TypeScript", "Blockchain DAO"],
+    "category": "データエンジニア",
+    "githubLink": "https://github.com/karthickpalanivel/",
+    "socialLink": null,
+    "demoLink": null,
+    "selectCategory": "データエンジニア"
+  },
     {
       "title": "Harbour for Students",
       "year": "2024年11月",
@@ -24,7 +76,8 @@
       "category": "モバイルアプリケーション",
       "githubLink": "https://github.com/karthickpalanivel/Harbour-for-Students.git",
       "socialLink": "https://x.com/0xharbourapp",
-      "demoLink": null
+      "demoLink": null,
+      "selectCategory": "モバイルアプリ"
     },
     {
       "title": "B2B-Hub India",
@@ -41,7 +94,8 @@
       "category": "モバイルアプリケーション",
       "githubLink": null,
       "socialLink": "https://www.b2bhubindia.com/",
-      "demoLink": null
+      "demoLink": null,
+      "selectCategory": "モバイルアプリ"
     },
     {
       "title": "Travello",
@@ -58,7 +112,8 @@
       "category": "モバイルアプリケーション",
       "githubLink": null,
       "socialLink": null,
-      "demoLink": null
+      "demoLink": null,
+      "selectCategory": "モバイルアプリ"
     },
     {
       "title": "The Bridge",
@@ -78,7 +133,8 @@
       "category": "Web-3アプリケーション",
       "githubLink": "https://github.com/karthickpalanivel/BridgePlatform.git",
       "socialLink": null,
-      "demoLink": null
+      "demoLink": null,
+      "selectCategory": "ウェブアプリ"
     },
     {
       "title": "AI Helps",
@@ -95,7 +151,8 @@
       "category": "ウェブチャットボット",
       "githubLink": "https://github.com/karthickpalanivel/SpringAI",
       "socialLink": null,
-      "demoLink": null
+      "demoLink": null,
+      "selectCategory": "ウェブアプリ"
     },
 
     {
@@ -112,7 +169,8 @@
       "category": "Web-3 モバイルアプリケーション",
       "githubLink": null,
       "socialLink": "https://devfolio.co/projects/rhino-rewards-59ca",
-      "demoLink": "https://www.youtube.com/watch?v=GIO8qZQ2QA4&t=3s"
+      "demoLink": "https://www.youtube.com/watch?v=GIO8qZQ2QA4&t=3s",
+      "selectCategory": "ウェブアプリ"
     },
     {
       "title": "Library Systems",
@@ -129,7 +187,8 @@
       "category": "デスクトップアプリケーション",
       "githubLink": "https://github.com/karthickpalanivel/E-Book-Management-System.git",
       "socialLink": null,
-      "demoLink": null
+      "demoLink": null,
+      "selectCategory": "ウェブアプリ"
     }
   ],
   "skills": [
@@ -144,10 +203,6 @@
     {
       "imageName": "テイルウィンドCSS",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144463/tailwind_ohcnl4.png"
-    },
-    {
-      "imageName": "タイプスクリプト",
-      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731581956/typescript-icon-icon-1024x1024-vh3pfez8_lujovw.png"
     },
     {
       "imageName": "リダックス",
@@ -166,24 +221,32 @@
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144463/springBoot_v80cuv.png"
     },
     {
-      "imageName": "ノード.js",
-      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/node-js_undgoz.png"
+      "imageName": "パイソン",
+      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754155878/python_w9hfo2.png"
     },
     {
       "imageName": "グラフQL",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731145031/GraphQL_ppyybr.png"
     },
     {
-      "imageName": "ポストグレSQL",
-      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/postgresql_lsaxz1.png"
+      "imageName": "MySQL",
+      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/mysql_ue29sb.png"
     },
     {
-      "imageName": "AWSデプロイ",
-      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/aws_qrije5.png"
+      "imageName": "Microsoft Azure",
+      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754152729/azure_c7buma.webp"
     },
     {
       "imageName": "ドッカー",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144904/dockerLogo_qgqh82.png"
+    },
+    {
+      "imageName":"データブリックス",
+      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754155878/databricks-no-bg_wvkvvc.png"
+    },
+    {
+      "imageName": "アパッチ　PySpark",
+      "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754155878/apacheSpark_nix9mz.png"
     }
   ]
 }
