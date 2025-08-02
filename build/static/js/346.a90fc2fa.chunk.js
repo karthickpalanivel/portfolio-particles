@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[346],{346:e=>{e.exports=JSON.parse('{"footer":"Designed and developed by Karthick Palanivel","smallGithub":"Github","smallLinkedin":"LinkedIn","smallTwitter":"X.com","smallGmail":"Mail me","rights":". All rights reserved."}')}}]);

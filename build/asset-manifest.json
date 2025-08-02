@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b45d0011.css",
+    "main.js": "/static/js/main.f3b3ba59.js",
+    "static/js/346.a90fc2fa.chunk.js": "/static/js/346.a90fc2fa.chunk.js",
+    "static/js/397.4f1b491b.chunk.js": "/static/js/397.4f1b491b.chunk.js",
+    "static/js/72.1ae7b305.chunk.js": "/static/js/72.1ae7b305.chunk.js",
+    "static/js/359.80f5b348.chunk.js": "/static/js/359.80f5b348.chunk.js",
+    "static/js/582.5c41ce45.chunk.js": "/static/js/582.5c41ce45.chunk.js",
+    "static/js/393.5092c1bf.chunk.js": "/static/js/393.5092c1bf.chunk.js",
+    "static/js/613.f12e6cab.chunk.js": "/static/js/613.f12e6cab.chunk.js",
+    "static/js/435.bfb87165.chunk.js": "/static/js/435.bfb87165.chunk.js",
+    "static/js/278.e81863d6.chunk.js": "/static/js/278.e81863d6.chunk.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/face.png": "/static/media/face.fabbaabea7873124df74.png",
+    "static/media/gb.png": "/static/media/gb.a741a8c4135d80475ea6.png",
+    "static/media/flag-in.png": "/static/media/flag-in.b7fe05d417e868470821.png",
+    "index.html": "/index.html",
+    "main.b45d0011.css.map": "/static/css/main.b45d0011.css.map",
+    "main.f3b3ba59.js.map": "/static/js/main.f3b3ba59.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b45d0011.css",
+    "static/js/main.f3b3ba59.js"
+  ]
+}
