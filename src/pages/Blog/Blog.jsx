@@ -21,7 +21,7 @@ const Blog = () => {
       try {
         const text = await loadText();
         setTextData(text);
-        console.log(text);
+        //console.log(text);
       } catch (error) {
         console.error("Error Loading langauge FILE", error);
       }

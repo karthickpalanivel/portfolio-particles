@@ -18,7 +18,7 @@ const Home = () => {
       try {
         const text = await loadText();
         setTextData(text);
-        console.log(text);
+        //console.log(text);
       } catch (error) {
         console.error("Error Loading langauge FILE", error);
       }
@@ -53,7 +53,7 @@ const Home = () => {
           {textData?.versatile}{" "}
           <span className="bg-gradient-to-r from-[#ff3535] via-[#e79a9a] to-[#3e3eb7] px-1 rounded-sm text-transparent bg-clip-text underline ">
             {textData?.bilingual}
-          </span>{" "}
+          </span>{" "}{new Date().getFullYear() - 2023}{textData?.years}{" "}
           {textData?.experience}{" "}
           {/* <span className="underline">2+ years</span>  */}
           {textData?.skills}
@@ -63,11 +63,11 @@ const Home = () => {
           <span className="underline">{textData?.availability}</span>{" "}
         </p>
 
-        <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
+        <div className="lg:mt-10 max-sm:mt-10 max-sm:grid">
           <a
             href="https://drive.google.com/drive/folders/1_EI-DzhH-kzUvejiO3qs0dVYe6XwS5pc?usp=sharing"
             target="_blank"
-            className="border text-center border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            className="max-sm:mb-2 border text-center border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
             rel="noreferrer"
           >
             {textData?.resume}
@@ -76,7 +76,7 @@ const Home = () => {
             href="https://linktr.ee/KarthickPalanivel"
             target="_blank"
             rel="noreferrer"
-            className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.contact}
           </a>
@@ -84,15 +84,15 @@ const Home = () => {
             href="https://topmate.io/karthick_palanivel/"
             target="_blank"
             rel="noreferrer"
-            className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
-            {/* {textData.} */}TopMate
+            {textData?.topmate}
           </a>
           <a
             href="https://calendly.com/karthickpalanivelit/30min"
             target="_blank"
             rel="noreferrer"
-            className="max-sm:my-4 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.bookings}
           </a>

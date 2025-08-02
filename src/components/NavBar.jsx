@@ -32,7 +32,7 @@ const NavBar = ({ active, setActive }) => {
     const langCode = language === "en" ? "jp" : "en";
     setLanguage(langCode);
     changeLanguage(langCode);
-    console.log(langCode);
+    //console.log(langCode);
     localStorage.setItem("language", langCode);
   };
 
@@ -195,7 +195,7 @@ const NavBar = ({ active, setActive }) => {
                 setDarkMode((prev) => {
                   const newMode = !prev;
                   localStorage.setItem("theme", newMode.toString());
-                  console.log(newMode);
+                  //console.log(newMode);
                   return newMode;
                 });
               }}
