@@ -55,8 +55,7 @@ const Home = () => {
             {textData?.bilingual}
           </span>{" "}{new Date().getFullYear() - 2023}{textData?.years}{" "}
           {textData?.experience}{" "}
-          {/* <span className="underline">2+ years</span>  */}
-          {textData?.skills}
+         <span className="underline">{textData?.skills}</span>{" "}{textData?.skills2}
         </p>
 
         <p>
@@ -64,14 +63,14 @@ const Home = () => {
         </p>
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid">
-          <a
+          {/* <a
             href="https://drive.google.com/drive/folders/1_EI-DzhH-kzUvejiO3qs0dVYe6XwS5pc?usp=sharing"
             target="_blank"
             className="max-sm:mb-2 border text-center border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
             rel="noreferrer"
           >
             {textData?.resume}
-          </a>
+          </a> */}
           <a
             href="https://linktr.ee/KarthickPalanivel"
             target="_blank"
