@@ -1,22 +1,20 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 
 //json data
 import LocationIcon from "../../assets/icons/LocationIcon";
 
 const Blog = () => {
-  const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
-  const langMap = {
-    en: () => import("./Languages/english.json"),
-    jp: () => import("./Languages/japanese.json"),
-  };
 
   useEffect(() => {
-    console.log(langCode);
+    const langMap = {
+      en: () => import("./Languages/english.json"),
+      jp: () => import("./Languages/japanese.json"),
+    };
+
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
       try {
@@ -40,7 +38,7 @@ const Blog = () => {
     >
       <p className="text-center text-xl">{textData?.socialNetwork}</p>
 
-      <div className="lg:grid lg:grid-cols-4 place-items-center">
+      <div className="lg:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 place-items-center">
         {textData?.events.map((event, index) => (
           <div className="p-5" key={index}>
             <div className="border border-[#ffffff7a] rounded-md p-3">

@@ -2,18 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import Face from "../../assets/images/face.png";
-import { useTranslation } from "react-i18next";
 const Home = () => {
-  const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
-  const langMap = {
-    en: () => import("./Languages/english.json"),
-    jp: () => import("./Languages/japanese.json"),
-  };
 
   useEffect(() => {
+    const langMap = {
+      en: () => import("./Languages/english.json"),
+      jp: () => import("./Languages/japanese.json"),
+    };
+
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
       try {
@@ -24,15 +23,13 @@ const Home = () => {
         console.error("Error Loading langauge FILE", error);
       }
     };
+
     loadLanguageText();
   }, [langCode]);
 
   return (
     <>
-      <section
-        style={{ color: "#fff", fontFamily: "poppins, sans-serif" }}
-        className="flex flex-col justify-center items-center max-sm:w-full"
-      >
+      <section className="text-white font-poppins flex flex-col justify-center items-center max-sm:w-full px-4 sm:px-8 lg:px-16">
         <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
           <div className="max-sm:w-9/12">
             <p

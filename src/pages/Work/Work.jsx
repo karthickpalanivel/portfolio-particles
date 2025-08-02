@@ -10,10 +10,10 @@ import "../../styles/modal.css";
 import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
-  const { t } = useTranslation();
-  const [showAllProject, setShowAllProject] = useState(true);
-  const [selectProject, setSelectProject] = useState(null);
+ 
+
   const [modalVisible, setModalVisible] = useState(false);
+  const [selectProject, setSelectProject] = useState(null); // Re-added 'selectProject' state
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
@@ -22,13 +22,14 @@ const Work = () => {
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
-  const langMap = {
-    en: () => import("./Languages/english.json"),
-    jp: () => import("./Languages/japanese.json"),
-    ta: () => import("./Languages/Tamil.json"),
-  };
 
   useEffect(() => {
+    const langMap = {
+      en: () => import("./Languages/english.json"),
+      jp: () => import("./Languages/japanese.json"),
+      ta: () => import("./Languages/Tamil.json"),
+    };
+
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
       try {
@@ -45,20 +46,13 @@ const Work = () => {
 
   return (
     <>
-      <section
-        style={{
-          color: "#fff",
-          fontFamily: "poppins, sans-serif",
-          overflowX: "hidden",
-        }}
-        className="lg:p-2/12"
-      >
+      <section className="text-white font-poppins min-h-[70vh] flex flex-col items-center px-4 sm:px-8 lg:px-16">
         <p className="text-center underline text-2xl my-5">
           {textData?.developments}
         </p>
 
         {/* projects */}
-        <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-8">
+        <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-5">
           {textData?.projects.map((project, index) => (
             <div className="lg:p-3 max-sm:py-3" key={index}>
               <div className="border border-white bg-[#7f7f7f21] rounded-md p-4 h-fit">

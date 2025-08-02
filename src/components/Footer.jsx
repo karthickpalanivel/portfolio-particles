@@ -13,15 +13,15 @@ const Footer = () => {
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
-  const langMap = {
-    en: () => import("./Languages/english.json"),
-    jp: () => import("./Languages/japanese.json")
-  };
-
 
   const date = new Date();
   const year = date.getFullYear();
   useEffect(() => {
+    const langMap = {
+      en: () => import("./Languages/english.json"),
+      jp: () => import("./Languages/japanese.json"),
+    };
+
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
       try {
@@ -93,7 +93,7 @@ const Footer = () => {
 
           {/* Twitter */}
           <a
-            href="https://twitter.com/KarthickWords"
+            href="https://x.com/KarthickWords"
             target="_blank"
             rel="noreferrer"
             className="flex flex-row space-x-2 lg:items-center max-sm:pl-3 lg:justify-center max-sm:my-2"
