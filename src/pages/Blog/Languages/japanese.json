@@ -3,6 +3,16 @@
   "moreInfo": "もっと見る",
   "events": [
     {
+      "event": "Rust Dev Meet-up host",
+      "location": "Guindy, チェンナイ",
+      "category": "ミートアップ",
+      "eventDescription": "",
+      "eventDate": "2025年7月26日",
+      "externalLink": "https://x.com/RustTribe/status/1950193564115149305",
+      "eventImage": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731230217/dine_boo9na.jpg",
+      "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731202581/web3Chennai_rgrrsz.jpg"
+    },
+    {
       "event": "ハックオンチェインデイ",
       "location": "IIT マドラス, チェンナイ",
       "category": "ミートアップ",

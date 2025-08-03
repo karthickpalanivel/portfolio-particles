@@ -9,7 +9,7 @@
   "proficiencies": "スキル",
   "projectName": "プロジェットの名",
   "category": "種類",
-  "categories": ["ウェブアプリ", "モバイルアプリ", "データエンジニア"],
+  "categories": ["ウェブアプリ", "モバイルアプリ", "データエンジニア", "技術"],
   "projects": [
     
   {
@@ -24,7 +24,7 @@
     ],
     "technologies": ["Azure Synapse Analytics", "Databricks", "Apache PySpark"],
     "category": "データエンジニア",
-    "githubLink": "https://github.com/karthickpalanivel/",
+    "githubLink": "https://github.com/karthickpalanivel/eCommerce_analysis",
     "socialLink": null,
     "demoLink": null,
     "selectCategory": "データエンジニア"
@@ -57,9 +57,9 @@
     ],
     "technologies": ["React-Native", "TypeScript", "Blockchain DAO"],
     "category": "データエンジニア",
-    "githubLink": "https://github.com/karthickpalanivel/",
+    "githubLink": null,
     "socialLink": null,
-    "demoLink": null,
+    "demoLink": "https://slime-hail-ff4.notion.site/Customer-Data-Analysis-for-Personalized-Banking-Services-2071493ee6c38039b7eed7974871e7d5?pvs=74",
     "selectCategory": "データエンジニア"
   },
     {

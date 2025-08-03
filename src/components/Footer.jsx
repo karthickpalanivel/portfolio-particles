@@ -7,27 +7,27 @@ import GitHubIcon from "../assets/icons/GitHubIcon";
 import TwitterIcon from "../assets/icons/TwitterIcon";
 import MailIcon from "../assets/icons/MailIcon";
 import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 const Footer = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
+  const langMap = {
+    en: () => import("./Languages/english.json"),
+    jp: () => import("./Languages/japanese.json")
+  };
+
 
   const date = new Date();
   const year = date.getFullYear();
   useEffect(() => {
-    const langMap = {
-      en: () => import("./Languages/english.json"),
-      jp: () => import("./Languages/japanese.json"),
-    };
-
     const loadLanguageText = async () => {
       const loadText = (await langMap[langCode]) || langMap.en;
       try {
         const text = await loadText();
         setTextData(text);
-        //console.log(text);
+        console.log(text);
       } catch (error) {
         console.error("Error Loading langauge FILE", error);
       }
@@ -93,7 +93,7 @@ const Footer = () => {
 
           {/* Twitter */}
           <a
-            href="https://x.com/KarthickWords"
+            href="https://twitter.com/KarthickWords"
             target="_blank"
             rel="noreferrer"
             className="flex flex-row space-x-2 lg:items-center max-sm:pl-3 lg:justify-center max-sm:my-2"
@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
 
         <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
-          {textData?.footer} &copy; {year}
+          {textData?.footer} &copy; {year}{textData?.rights}
         </div>
       </footer>
     </>

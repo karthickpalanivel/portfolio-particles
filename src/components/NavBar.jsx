@@ -5,6 +5,8 @@ import HomeIcon from "../assets/icons/HomeIcon";
 import WorkIcon from "../assets/icons/WorkIcon";
 import BlogIcon from "../assets/icons/BlogIcon";
 import LanguageIcon from "../assets/icons/LanguageIcon";
+import MoonIcon from "../assets/icons/MoonIcon";
+import SunIcon from "../assets/icons/SunIcon";
 
 // Images
 import Ind from "../assets/images/flag-in.png";
@@ -16,12 +18,13 @@ import { useTranslation } from "react-i18next";
 import { changeLanguage } from "../locale/i18n";
 
 const NavBar = ({ active, setActive }) => {
-
+  const theme = localStorage.getItem("theme") || true;
 
   const [language, setLanguage] = useState(
     localStorage.getItem("language") || "en"
   );
 
+  const [darkMode, setDarkMode] = useState(theme);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { t } = useTranslation();
@@ -32,7 +35,7 @@ const NavBar = ({ active, setActive }) => {
     const langCode = language === "en" ? "jp" : "en";
     setLanguage(langCode);
     changeLanguage(langCode);
-    //console.log(langCode);
+    console.log(langCode);
     localStorage.setItem("language", langCode);
   };
 
@@ -108,13 +111,22 @@ const NavBar = ({ active, setActive }) => {
               )}
             </div>
           </li>
-       
+          <li
+            onClick={() => {
+              setDarkMode((prev) => {
+                const newMode = !prev;
+                localStorage.setItem("theme", newMode.toString());
+                console.log(newMode);
+                return newMode;
+              });
+            }}
+          >
             {/* {darkMode ? (
               <SunIcon colors={"#fff"} />
             ) : (
               <MoonIcon colors={"#000"} />
             )} */}
-          
+          </li>
         </ul>
       </div>
 
@@ -195,7 +207,7 @@ const NavBar = ({ active, setActive }) => {
                 setDarkMode((prev) => {
                   const newMode = !prev;
                   localStorage.setItem("theme", newMode.toString());
-                  //console.log(newMode);
+                  console.log(newMode);
                   return newMode;
                 });
               }}

@@ -3,6 +3,16 @@
   "moreInfo": "More Info",
   "events": [
     {
+      "event": "Rust Dev Meet-up host",
+      "location": "Guindy, Chennai",
+      "category": "Meet-up",
+      "eventDescription": "",
+      "externalLink": "https://x.com/RustTribe/status/1950193564115149305",
+      "eventDate": "26 August 2025",
+      "eventImage": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731230217/dine_boo9na.jpg",
+      "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731202581/web3Chennai_rgrrsz.jpg"
+    },
+    {
       "event": "Hack onChain Day",
       "location": "IIT Madras, Chennai",
       "category": "Meet-up",

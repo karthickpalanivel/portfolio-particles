@@ -1,6 +1,6 @@
 {
   "developments": "Developments",
-  "description": "Description:",
+  "description": "Description: ",
   "linksComingSoon": "Links Adding soon",
   "demo": "Demo",
   "githubLink": "Github link",
@@ -9,7 +9,7 @@
   "proficiencies": "Proficiencies",
   "projectName": "Project Name:",
   "category": "Category",
-  "categories": ["Web App", "Mobile App", "Data Engineer"],
+  "categories": ["Web App", "Mobile App", "Data Engineer", "Tech-Stack"],
   "projects": [
     {
       "title": "B2B Ecommerce Data Analytics",
@@ -21,11 +21,16 @@
         "Implemented auto-scaling clusters in Azure Synapse with min/max node configuration to handle peak dataloads reducing compute and cutting cloud costs.",
         "Implemented automated data quality and debugging using Spark UI setting breakpoints, and leveraging detection for reducing transaction errors and enhancing reporting."
       ],
-      "technologies": ["Azure Synapse Analytics", "Databricks", "Apache PySpark"],
+      "technologies": [
+        "Azure Synapse Analytics",
+        "Databricks",
+        "Apache PySpark"
+      ],
       "category": "Data Engineer",
-      "githubLink": "https://github.com/karthickpalanivel/",
+      "githubLink": "https://github.com/karthickpalanivel/eCommerce_analysis",
       "socialLink": null,
       "demoLink": null,
+
       "selectCategory": "Data Engineer"
     },
     {
@@ -57,9 +62,9 @@
       ],
       "technologies": ["Azure", "Apache PySpark", "DataBricks"],
       "category": "Data Engineer",
-      "githubLink": "https://github.com/karthickpalanivel/",
+      "githubLink": null,
       "socialLink": null,
-      "demoLink": null,
+      "demoLink": "https://slime-hail-ff4.notion.site/Customer-Data-Analysis-for-Personalized-Banking-Services-2071493ee6c38039b7eed7974871e7d5?pvs=74",
       "selectCategory": "Data Engineer"
     },
     {
@@ -135,7 +140,7 @@
     {
       "title": "AI Helps",
       "year": "March 2024",
-      "shortDescription": "A ChatBot serves customer's queries by AI based image solutions 24/7",
+      "shortDescription": "A ChatBot serves customer's by AI based image 24/7",
       "workedMode": "Java Full Stack Engineer @ Trio Devs Digital Solution",
       "description": [
         "AI Helps is an advanced AI-powered chatbot designed to address customer queries around the clock, providing image-based solutions using spring-open-ai.",
