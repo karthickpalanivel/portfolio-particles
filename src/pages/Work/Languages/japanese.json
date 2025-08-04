@@ -234,7 +234,7 @@
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731144462/mysql_ue29sb.png"
     },
     {
-      "imageName": "Microsoft Azure",
+      "imageName": "マイクロソフトAzure",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754152729/azure_c7buma.webp"
     },
     {
@@ -246,7 +246,7 @@
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754155878/databricks-no-bg_wvkvvc.png"
     },
     {
-      "imageName": "アパッチ　PySpark",
+      "imageName": "アパッチPySpark",
       "imageLink": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1754155878/apacheSpark_nix9mz.png"
     }
   ]
