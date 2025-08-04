@@ -94,7 +94,7 @@ const Footer = () => {
             className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
           >
             <MediumIcon colors={"#fff"} />
-            <p className="">{textData.medium}</p>
+            <p className="">{textData?.medium}</p>
           </a>
         </div>
 
