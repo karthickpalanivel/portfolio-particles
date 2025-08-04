@@ -1,6 +1,4 @@
-// Blog, short intro
-
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Face from "../../assets/images/face.png";
 import { useTranslation } from "react-i18next";
 const Home = () => {
@@ -97,7 +95,7 @@ const Home = () => {
             href="https://calendly.com/karthickpalanivelit/30min"
             target="_blank"
             rel="noreferrer"
-            className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            className="sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.bookings}
           </a>

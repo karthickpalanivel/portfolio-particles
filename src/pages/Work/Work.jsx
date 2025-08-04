@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 //icons
@@ -16,7 +15,7 @@ const Work = () => {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [selectProject, setSelectProject] = useState(null);
-  const [projectFilter, setProjectFilter] = useState(-1); // -1 for "All" projects
+  const [projectFilter, setProjectFilter] = useState(-1); 
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   const toggleModal = () => {
@@ -38,7 +37,6 @@ const Work = () => {
         const text = await loadText();
         setTextData(text);
         setFilteredProjects(text.projects);
-        //console.log(text);
       } catch (error) {
         console.error("Error Loading langauge FILE", error);
       }
@@ -50,10 +48,8 @@ const Work = () => {
     useEffect(() => {
       if (textData && textData.projects) {
         if (projectFilter === -1) {
-          // Show all projects when filter is -1
           setFilteredProjects(textData.projects);
         } else {
-          // Filter projects based on selected category
           const selectedCategory = textData.categories[projectFilter];
           const filtered = textData.projects.filter(
             (project) => project.selectCategory === selectedCategory
@@ -62,6 +58,22 @@ const Work = () => {
         }
       }
     }, [projectFilter, textData]);
+
+
+    useEffect(() => {
+      if(modalVisible && selectProject) {
+        document.body.style.overflow = "hidden";
+      }
+
+      else {
+        document.body.style.overflow = "";
+      }
+      
+      return () =>{
+        document.body.style.overflow="";
+      };
+    }, [modalVisible, selectProject])
+    
 
   return (
     <>
@@ -79,7 +91,7 @@ const Work = () => {
 
         {/* Project category section */}
 
-        <div className="lg:flex flex-row my-5 justify-center max-sm:grid max-sm:grid-cols-2 max-sm:gap-2">
+        <div className="lg:flex flex-row my-5 justify-center sm:grid sm:grid-cols-2 sm:gap-2">
           <div
             className={`border mx-2 max-sm:my-2 text-center rounded-2xl px-3 py-1 cursor-pointer ${
               projectFilter === -1
@@ -106,10 +118,10 @@ const Work = () => {
         </div>
 
         {/* projects */}
-        <div className="works-section grid lg:grid-cols-2 max-sm:grid-cols-1 max-sm:px-8">
+        <div className="works-section grid lg:grid-cols-2 sm:px-8">
           {filteredProjects.map((project, index) => (
-            <div className="lg:p-3 max-sm:py-3" key={index}>
-              <div className="border border-white bg-[#7f7f7f21] rounded-md p-4 h-fit">
+            <div className="lg:p-3 sm:py-3" key={index}>
+              <div className="border border-white bg-[#aeaeae21] rounded-md p-4 h-fit">
                 {/* project header */}
                 <div className="flex flex-row justify-between">
                   <h1 className="w-1/2 text-xl underline max-sm:mb-2">
@@ -118,26 +130,16 @@ const Work = () => {
                   <p className="my-1 text-right">{project.category}</p>
                 </div>
 
-                <div className="mt-2 lg:flex flex-row justify-between">
-                  {project?.workedMode ? (
-                    <div className="flex flex-row space-x-3 items-center">
-                      <OrganizationIcon colors={"#fff"} />
-                      <p className="text-sm">{project?.workedMode}</p>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
-
+                <div className="lg:flex flex-row justify-between">
+                  <p className={`my-1 ${langCode === "en" && "italic"}`}>
+                    {/* <span>{textData?.description} </span> */}
+                    {project?.shortDescription}
+                  </p>
                   <div className="flex flex-row space-x-3 items-center max-sm:my-2">
                     <BlogIcon />
                     <p className="text-right italic">{project?.year}</p>
                   </div>
                 </div>
-
-                <p className={`my-1 ${langCode === "en" && "italic"}`}>
-                  {/* <span>{textData?.description} </span> */}
-                  {project?.shortDescription}
-                </p>
 
                 {/* technologies and modal trigger */}
                 <div className="lg:flex lg:flex-wrap justify-between items-center">
@@ -242,11 +244,11 @@ const Work = () => {
           {textData?.proficiencies}
         </p>
         {/* skills */}
-        <div className="lg:flex lg:flex-wrap grid grid-cols-3 items-center justify-center">
+        <div className="lg:flex flex-wrap grid grid-cols-3 items-center">
           {textData?.skills.map((skills, index) => (
             <div
               key={index}
-              className="w-32 flex flex-col items-center justify-center"
+              className="flex flex-col items-center justify-center"
             >
               <img
                 src={skills.imageLink}

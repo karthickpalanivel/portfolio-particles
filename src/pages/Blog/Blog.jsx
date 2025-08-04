@@ -1,8 +1,5 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
-//json data
 import LocationIcon from "../../assets/icons/LocationIcon";
 
 const Blog = () => {
