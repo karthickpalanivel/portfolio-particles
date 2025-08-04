@@ -244,7 +244,7 @@ const Work = () => {
           {textData?.proficiencies}
         </p>
         {/* skills */}
-        <div className="lg:flex flex-wrap grid grid-cols-3 items-center">
+        <div className="lg:flex flex-wrap grid grid-cols-3 justify-center items-center">
           {textData?.skills.map((skills, index) => (
             <div
               key={index}

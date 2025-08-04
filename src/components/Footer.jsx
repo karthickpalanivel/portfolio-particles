@@ -1,11 +1,9 @@
-import React from "react";
-
-// icons
-
+//
 import LinkedinIcon from "../assets/icons/LinkedinIcon";
 import GitHubIcon from "../assets/icons/GitHubIcon";
 import TwitterIcon from "../assets/icons/TwitterIcon";
 import MailIcon from "../assets/icons/MailIcon";
+import MediumIcon from "../assets/icons/MediumIcon";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 const Footer = () => {
@@ -47,65 +45,62 @@ const Footer = () => {
           fontFamily: "poppins, sans-serif",
         }}
       >
-        <div className="lg:visible  grid lg:grid-cols-4 sm:grid-cols-2 sm:flex-col items-center">
+        <div className="lg:flex lg:flex-row lg:justify-between max-sm:grid max-sm:grid-cols-2 max-sm:gap-5">
           {/* linkedin */}
           <a
             href="https://www.linkedin.com/in/karthick-palanivel/"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 lg:justify-center sm:pl-3 sm:my-2"
+            className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
           >
             <LinkedinIcon colors={"white"} />
-            <p className="lg:visible sm:hidden">
-              linkedin.com/karthickpalanivel
-            </p>
-            <p className="lg:hidden sm:visible">
-              {textData?.smallLinkedin}
-            </p>
+            <p className="">{textData?.smallLinkedin}</p>
           </a>
 
           <a
             href="mailto:karthickpalanivelit@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 lg:items-center sm:pl-3 lg:justify-center sm:my-2"
+            className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
           >
             <MailIcon colors={"#fff"} />
-            <p className="lg:visible sm:hidden">
-              karthickpalanivelit@gmail.com
-            </p>
-            <p className="lg:hidden sm:visible">{textData?.smallGmail}</p>
+            <p className="">{textData?.smallGmail}</p>
           </a>
 
-          {/* github */}
           <a
             href="https://github.com/karthickpalanivel/"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 lg:items-center sm:pl-3 lg:justify-center sm:my-2"
+            className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
           >
             <GitHubIcon colors={"white"} />
-            <p className="lg:visible sm:hidden">
-              github.com/karthickpalanivel
-            </p>
-            <p className="lg:hidden sm:visible">{textData?.smallGithub}</p>
+            <p className="">{textData?.smallGithub}</p>
           </a>
 
-          {/* Twitter */}
           <a
             href="https://twitter.com/KarthickWords"
             target="_blank"
             rel="noreferrer"
-            className="flex flex-row space-x-2 lg:items-center sm:pl-3 lg:justify-center sm:my-2"
+            className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
           >
             <TwitterIcon colors={"#fff"} />
-            <p className="lg:visible sm:hidden">x.com/KarthickWords</p>
-            <p className="lg:hidden sm:visible">{textData?.smallTwitter}</p>
+            <p className="">{textData?.smallTwitter}</p>
+          </a>
+
+          <a
+            href="https://medium.com/@karthickpalanivelit"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
+          >
+            <MediumIcon colors={"#fff"} />
+            <p className="">{textData.medium}</p>
           </a>
         </div>
 
         <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
-          {textData?.footer} &copy; {year}{textData?.rights}
+          {textData?.footer} &copy; {year}
+          {textData?.rights}
         </div>
       </footer>
     </>
@@ -113,3 +108,7 @@ const Footer = () => {
 };
 
 export default Footer;
+/*
+
+          
+*/

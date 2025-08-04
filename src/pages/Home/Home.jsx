@@ -95,7 +95,7 @@ const Home = () => {
             href="https://calendly.com/karthickpalanivelit/30min"
             target="_blank"
             rel="noreferrer"
-            className="sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.bookings}
           </a>
