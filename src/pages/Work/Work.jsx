@@ -6,7 +6,6 @@ import XcloseIcon from "../../assets/icons/XcloseIcon";
 import BlogIcon from "../../assets/icons/BlogIcon";
 
 import "../../styles/modal.css";
-import OrganizationIcon from "../../assets/icons/OrganizationIcon";
 
 const Work = () => {
   const { t } = useTranslation();
@@ -91,7 +90,7 @@ const Work = () => {
 
         {/* Project category section */}
 
-        <div className="lg:flex flex-row my-5 justify-center sm:grid sm:grid-cols-2 sm:gap-2">
+        <div className="lg:flex flex-row my-5 justify-center max-sm:grid max-sm:grid-cols-2 sm:gap-2">
           <div
             className={`border mx-2 max-sm:my-2 text-center rounded-2xl px-3 py-1 cursor-pointer ${
               projectFilter === -1
@@ -118,7 +117,7 @@ const Work = () => {
         </div>
 
         {/* projects */}
-        <div className="works-section grid lg:grid-cols-2 sm:px-8">
+        <div className="works-section grid lg:grid-cols-2 max-sm:p-5 max-sm:gap-5 sm:grid-cols-1">
           {filteredProjects.map((project, index) => (
             <div className="lg:p-3 sm:py-3" key={index}>
               <div className="border border-white bg-[#aeaeae21] rounded-md p-4 h-fit">
@@ -129,22 +128,12 @@ const Work = () => {
                   </h1>
                   <p className="my-1 text-right">{project.category}</p>
                 </div>
-
-                <div className="lg:flex flex-row justify-between">
-                  <p className={`my-1 ${langCode === "en" && "italic"}`}>
-                    {/* <span>{textData?.description} </span> */}
-                    {project?.shortDescription}
-                  </p>
-                  <div className="flex flex-row space-x-3 items-center max-sm:my-2">
-                    <BlogIcon />
-                    <p className="text-right italic">{project?.year}</p>
-                  </div>
-                </div>
-
+                <p className={`my-1 ${langCode === "en" && "italic"}`}>
+                  {project?.shortDescription}
+                </p>
                 {/* technologies and modal trigger */}
                 <div className="lg:flex lg:flex-wrap justify-between items-center">
                   <div className="flex flex-wrap items-center">
-                    {/* <p className="mr-2">Tech Stack: </p> */}
                     {project.technologies.map((items) => (
                       <div
                         key={items}
@@ -160,7 +149,11 @@ const Work = () => {
                 <div className="my-4">
                   {project.demoLink === null &&
                     project.githubLink === null &&
-                    project.socialLink === null && <p>Links Adding soon</p>}
+                    project.socialLink === null && (
+                      <p className={`${langCode === "en" && "italic"}`}>
+                       {textData?.linkedAddingSoon}
+                      </p>
+                    )}
 
                   {project.demoLink && (
                     <a

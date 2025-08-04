@@ -9,6 +9,7 @@
   "proficiencies": "Proficiencies",
   "projectName": "Project Name:",
   "category": "Category",
+  "linkedAddingSoon": "Links adding soon...",
   "categories": ["Web App", "Mobile App", "Data Engineer", "Tech-Stack"],
   "projects": [
     {

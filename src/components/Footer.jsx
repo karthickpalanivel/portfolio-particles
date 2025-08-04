@@ -98,7 +98,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="mb-3 mt-10 text-center text-gray-400 text-sm ">
+        <div className="my-3 text-center text-gray-400 text-sm ">
           {textData?.footer} &copy; {year}
           {textData?.rights}
         </div>

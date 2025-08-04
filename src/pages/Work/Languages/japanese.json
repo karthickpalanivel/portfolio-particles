@@ -9,6 +9,7 @@
   "proficiencies": "スキル",
   "projectName": "プロジェットの名",
   "category": "種類",
+  "linkedAddingSoon" : "リンクはすぐに追加されます。",
   "categories": ["ウェブアプリ", "モバイルアプリ", "データエンジニア", "技術"],
   "projects": [
     
