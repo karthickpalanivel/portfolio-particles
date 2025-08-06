@@ -63,7 +63,7 @@ const Home = () => {
         </p>
 
         <p>
-          <span className="underline">{textData?.availability}</span>{" "}
+          <span className="underline">{textData?.opportunity}</span>{" "}
         </p>
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
@@ -101,7 +101,7 @@ const Home = () => {
           </a>
         </div>
 
-        <p className="mt-10 max-sm:px-4">{textData?.opportunity}</p>
+        <p className="mt-10 max-sm:px-4">{textData?.availability}</p>
       </section>
     </>
   );
