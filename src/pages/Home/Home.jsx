@@ -59,11 +59,8 @@ const Home = () => {
           </span>{" "}
           {textData?.experience}{" "}
           <span className="underline">{textData?.skills}</span>{" "}
-          {textData?.skills2}
-        </p>
-
-        <p>
-          <span className="underline">{textData?.opportunity}</span>{" "}
+          {textData?.skills2}{" "}
+          <span className="underline">{textData?.opportunity}</span>
         </p>
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
