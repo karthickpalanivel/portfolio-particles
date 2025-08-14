@@ -25,7 +25,7 @@ function App() {
       <ParticlesComponent id="particle-js" />
       {/* <div style={{backgroundColor: "#000", minHeight:"100vh"}}> */}
         <NavBar active={active} setActive={handleTabChange} />
-        <div className="min-h-70vh">
+        <div style={{ minHeight: 70vh }}>
           {active === "home" && <Home />}
           {active === "work" && <Work />}
           {active === "blog" && <Blog />}
