@@ -23,15 +23,19 @@ function App() {
   return (
     <>
       <ParticlesComponent id="particle-js" />
-      {/* <div style={{backgroundColor: "#000", minHeight:"100vh"}}> */}
-        <NavBar active={active} setActive={handleTabChange} />
-        <div style={{ minHeight: '70vh' }}>
+      <div className="flex flex-col min-h-screen bg-transparent">
+        <div className="h-[15vh]">
+          <NavBar active={active} setActive={handleTabChange} />
+        </div>
+        <div className="min-h-[70vh] flex items-center justify-center">
           {active === "home" && <Home />}
           {active === "work" && <Work />}
           {active === "blog" && <Blog />}
         </div>
-        <Footer />
-      {/* </div> */}
+        <div className="flex-1">
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }
