@@ -11,7 +11,21 @@
   "availability": "現在、ビジネスのお手伝いをすることができます",
   "resume": "英語と日本語履歴書",
   "contact": "お問い合わせ",
-  "bookings":"私と話したいために",
+  "bookings": "私と話したいために",
   "opportunity": "現在、新しい機会を探していますので、メールでご連絡いただくか、ソーシャル メディアで私に連絡してください。",
-  "topmate":"トップメイト"
+  "topmate": "トップメイト",
+  "booking": [
+    {
+      "link": "https://linktr.ee/KarthickPalanivel",
+      "linkSite": "お問い合わせ"
+    },
+    {
+      "link": "https://topmate.io/karthick_palanivel/",
+      "linkSite": "トップメイト"
+    },
+    {
+      "link": "https://calendly.com/karthickpalanivelit/30min",
+      "linkSite": "お話しましょう"
+    }
+  ]
 }

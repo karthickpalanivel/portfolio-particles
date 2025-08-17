@@ -71,7 +71,8 @@ const Home = () => {
             rel="noreferrer"
           >
             {textData?.resume}
-          </a> */}
+          </a> 
+          
           <a
             href="https://linktr.ee/KarthickPalanivel"
             target="_blank"
@@ -95,7 +96,18 @@ const Home = () => {
             className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
           >
             {textData?.bookings}
-          </a>
+          </a> */}
+          {textData?.booking.map((contactMedium) => (
+            <a
+              key={contactMedium.link}
+              href={contactMedium.link}
+              target="_blank"
+              rel="noreferrer"
+              className="max-sm:my-2 border text-center text-white border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
+            >
+              {contactMedium.linkSite}
+            </a>
+          ))}
         </div>
 
         <p className="mt-10 max-sm:px-4">{textData?.availability}</p>

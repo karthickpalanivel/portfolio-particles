@@ -7,11 +7,25 @@
   "experience": "experienced",
   "years": "+ years",
   "skills": "on Web🌐, Mobile📱 Apps, and Data Engineer🖥️.",
-  "skills2":"Ample experience in user-centric full-stack development, Web-3 Development delivering well-documented, responsive, building optimized ETL pipelines, and dynamic development",
+  "skills2": "Ample experience in user-centric full-stack development, Web-3 Development delivering well-documented, responsive, building optimized ETL pipelines, and dynamic development",
   "availability": "I'm open to help your business now",
   "resume": "Resume",
   "contact": "Get In Touch",
-  "bookings":"Let’s Talk",
+  "bookings": "Let’s Talk",
   "opportunity": "reach out via email or connect with me on my social media.",
-  "topmate":"Top-Mate"
+  "topmate": "Top-Mate",
+  "booking": [
+    {
+      "link": "https://linktr.ee/KarthickPalanivel",
+      "linkSite": "Get In touch"
+    },
+    {
+      "link": "https://topmate.io/karthick_palanivel/",
+      "linkSite": "Top-Mate"
+    },
+    {
+      "link": "https://calendly.com/karthickpalanivelit/30min",
+      "linkSite": "Let's Talk"
+    }
+  ]
 }

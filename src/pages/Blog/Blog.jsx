@@ -50,7 +50,7 @@ const Blog = () => {
                 <img
                   src={event?.eventLogo}
                   alt="event logo"
-                  className="rounded-lg border border-[#ffffff50] object-cover w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28"
+                  className="rounded-lg border border-[#ffffff50] object-cover w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
                 />
               </div>
               <div className="flex flex-row justify-between items-center mt-2">
@@ -61,7 +61,7 @@ const Blog = () => {
                 <a
                   href={event?.externalLink}
                   target="_blank"
-                  className="cursor-pointer border border-[#ffffff68] w-1/3 text-center px-2 py-1 rounded-md mt-2 place-items-end"
+                  className="cursor-pointer text-sm border border-[#ffffff68] w-1/3 text-center px-2 py-1 rounded-md mt-2 place-items-end"
                   rel="noreferrer"
                 >
                   {textData?.moreInfo}
