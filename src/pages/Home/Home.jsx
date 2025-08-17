@@ -64,14 +64,14 @@ const Home = () => {
         </p>
 
         <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
-          <a
+          {/* <a
             href="https://drive.google.com/drive/folders/1dFSaz3Nv61tONSqbFXhVGvsgXXv5SSy2?usp=drive_link"
             target="_blank"
             className="max-sm:mb-2 border text-center border-[#fff] px-6 py-2 rounded-md mx-10 transition-all hover:bg-[#fff] hover:text-[#000] hover:shadow-lg hover:px-8"
             rel="noreferrer"
           >
             {textData?.resume}
-          </a>
+          </a> */}
           <a
             href="https://linktr.ee/KarthickPalanivel"
             target="_blank"

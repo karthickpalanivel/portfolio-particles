@@ -6,7 +6,7 @@ const Blog = () => {
   const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
   const [textData, setTextData] = useState();
-  
+
   useEffect(() => {
     const langMap = {
       en: () => import("./Languages/english.json"),
@@ -36,30 +36,30 @@ const Blog = () => {
     >
       <p className="text-center text-xl">{textData?.socialNetwork}</p>
 
-      <div className="lg:grid lg:grid-cols-4 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
         {textData?.events.map((event, index) => (
-          <div className="p-5" key={index}>
+          <div className="p-5 w-full" key={index}>
             <div className="border border-[#ffffff7a] rounded-md p-3">
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between items-center">
                 <div className="w-4/6">
-                  <p>{event.event}</p>
-                  <p>{event.category}</p>
-                  <p className="italic">{event.eventDate}</p>
+                  <p>{event?.event}</p>
+                  <p>{event?.category}</p>
+                  <p className="italic">{event?.eventDate}</p>
                 </div>
 
                 <img
-                  src={event.eventLogo}
+                  src={event?.eventLogo}
                   alt="event logo"
-                  className="w-3/12 h-auto rounded-lg border border-[#ffffff50]"
+                  className="rounded-lg border border-[#ffffff50] object-cover w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28"
                 />
               </div>
               <div className="flex flex-row justify-between items-center mt-2">
                 <div className="flex flex-row items-center w-2/3">
                   <LocationIcon />
-                  <p className="ml-2">{event.location}</p>
+                  <p className="ml-2">{event?.location}</p>
                 </div>
                 <a
-                  href={event.externalLink}
+                  href={event?.externalLink}
                   target="_blank"
                   className="cursor-pointer border border-[#ffffff68] w-1/3 text-center px-2 py-1 rounded-md mt-2 place-items-end"
                   rel="noreferrer"
