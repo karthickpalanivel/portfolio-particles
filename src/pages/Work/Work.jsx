@@ -90,7 +90,7 @@ const Work = () => {
 
         {/* Project category section */}
 
-        <div className="lg:flex flex-row my-5 justify-center max-sm:grid max-sm:grid-cols-2 sm:gap-2">
+        <div className="lg:flex flex-row my-5 justify-center max-sm:grid max-sm:grid-cols-2 sm:gap-2 items-center">
           <div
             className={`border mx-2 max-sm:my-2 text-center rounded-2xl px-3 py-1 cursor-pointer ${
               projectFilter === -1
@@ -151,7 +151,7 @@ const Work = () => {
                     project.githubLink === null &&
                     project.socialLink === null && (
                       <p className={`${langCode === "en" && "italic"}`}>
-                       {textData?.linkedAddingSoon}
+                        {textData?.linkedAddingSoon}
                       </p>
                     )}
 

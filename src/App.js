@@ -27,7 +27,7 @@ function App() {
         <div className="h-[15vh]">
           <NavBar active={active} setActive={handleTabChange} />
         </div>
-        <div className="min-h-[70vh] flex items-center justify-center">
+        <div className="min-h-[70vh] flex">
           {active === "home" && <Home />}
           {active === "work" && <Work />}
           {active === "blog" && <Blog />}

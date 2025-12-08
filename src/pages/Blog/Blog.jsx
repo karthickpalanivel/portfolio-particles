@@ -36,7 +36,7 @@ const Blog = () => {
     >
       <p className="text-center text-xl">{textData?.socialNetwork}</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center items-center justify-center lg:ml-32 lg:mr-32 mt-8 mb-8">
         {textData?.events.map((event, index) => (
           <div className="p-5 w-full" key={index}>
             <div className="border border-[#ffffff7a] rounded-md p-3">
