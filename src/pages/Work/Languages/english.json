@@ -13,6 +13,27 @@
   "categories": ["Web App", "Mobile App", "Data Engineer", "Tech-Stack"],
   "projects": [
     {
+      "title": "Sandhu Cricket",
+      "year": "December 2025",
+      "workedMode": "",
+      "shortDescription": "Let's Play and Count on every player",
+      "description": [
+        "Developed a responsive, mobile-first sports scoring application using Next.js 14, React Hooks, and Tailwind CSS, utilizing Local Storage for seamless state persistence across user sessions.",
+        "Designed a dynamic roster management system featuring drag-and-drop team drafting, bulk data import capabilities, and a one-click history restore feature to significantly reduce application setup time.",
+        "Implemented real-time match statistics including a scrolling ball-by-ball timeline, automated innings break summaries, and dynamic leaderboards highlighting top-performing players."
+      ],
+      "technologies": [
+        "Next Js",
+        "Redux",
+        "State-Management"
+      ],
+      "category": "Web Application",
+      "githubLink": "https://github.com/karthickpalanivel/sandhucricket-players.git",
+      "socialLink": null,
+      "demoLink": "https://freerulecric.vercel.app/",
+      "selectCategory": "Web App"
+    },
+    {
       "title": "B2B Ecommerce Data Analytics",
       "year": "May 2025",
       "workedMode": "Freelancer",
