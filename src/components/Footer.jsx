@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 //
 import LinkedinIcon from "../assets/icons/LinkedinIcon";
 import GitHubIcon from "../assets/icons/GitHubIcon";
@@ -48,7 +49,7 @@ const Footer = () => {
         <div className="lg:flex lg:flex-row lg:justify-between max-sm:grid max-sm:grid-cols-2 max-sm:gap-5">
           {/* linkedin */}
           <a
-            href="https://www.linkedin.com/in/karthick-palanivel/"
+            href="https://www.linkedin.com/in/karthickpalanivel/"
             target="_blank"
             rel="noreferrer"
             className="flex flex-row space-x-2 lg:justify-center items-center max-sm:pl-3 sm:my-2"
