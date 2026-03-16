@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import Face from "../../assets/images/face.png";
-import { useTranslation } from "react-i18next";
+
 const Home = () => {
-  const { t } = useTranslation();
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
@@ -29,30 +27,28 @@ const Home = () => {
     <>
       <section
         style={{ color: "#fff", fontFamily: "poppins, sans-serif" }}
-        className="text-white font-poppins flex flex-col justify-center items-center max-sm:w-full px-4 sm:px-8 lg:px-16"
+        className="text-white font-poppins flex flex-col justify-center items-center w-full px-4 sm:px-8 md:px-12 lg:px-16 3xl:px-24"
       >
-        <div className="flex lg:flex-row lg:justify-evenly max-sm:flex-col items-center">
-          <div className="max-sm:w-9/12">
+        <div className="flex w-full max-w-[1600px] 3xl:max-w-[2200px] flex-col md:flex-row md:justify-between md:items-center">
+          <div className="w-full max-sm:w-9/12 md:w-2/3 lg:w-3/5 3xl:w-1/2">
             <p
               className={`${
                 langCode === "en" ? "lg:text-4xl" : "lg:text-2xl"
-              } max-sm:text-xl lg:my-5 max-sm:mt-5`}
+              } text-xl md:text-3xl lg:my-5 max-sm:mt-5 3xl:text-5xl`}
             >
               {textData?.greeting}{" "}
               <span className="font-bold underline">{textData?.name}</span>
             </p>
-            <p className="lg:text-2xl max-sm:mb-8 sm:text-center">
+            <p className="md:text-xl lg:text-2xl max-sm:mb-8 sm:text-center md:text-left 3xl:text-3xl">
               {textData?.title}
             </p>
           </div>
-          <img src={Face} alt="face-logo" className="rounded-full w-1/5" />
+          {/* <img src={Face} alt="face-logo" className="rounded-full w-1/5" /> */}
         </div>
 
         {/* 🇯🇵🇬🇧 about me */}
 
-        <p
-          className={`lg:pt-10 lg:px-60 max-sm:px-5 max-sm:my-4 text-lg text-justify`}
-        >
+        <p className="w-full max-w-[1600px] 3xl:max-w-[2200px] pt-8 md:pt-10 px-5 md:px-8 lg:px-20 xl:px-32 2xl:px-52 3xl:px-72 max-sm:my-4 text-base md:text-lg 3xl:text-2xl text-justify">
           {textData?.versatile}{" "}
           <span className="bg-gradient-to-r from-[#ff3535] via-[#e79a9a] to-[#3e3eb7] px-1 rounded-sm text-transparent bg-clip-text underline ">
             {textData?.bilingual}
@@ -63,7 +59,7 @@ const Home = () => {
           <span className="underline">{textData?.opportunity}</span>
         </p>
 
-        <div className="lg:mt-10 max-sm:mt-10 max-sm:grid max-sm:grid-col-2">
+        <div className="w-full max-w-[1600px] 3xl:max-w-[2200px] mt-10 grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-3 lg:gap-0">
           {/* <a
             href="https://drive.google.com/drive/folders/1dFSaz3Nv61tONSqbFXhVGvsgXXv5SSy2?usp=drive_link"
             target="_blank"
@@ -110,7 +106,9 @@ const Home = () => {
           ))}
         </div>
 
-        <p className="mt-10 max-sm:px-4">{textData?.availability}</p>
+        <p className="mt-10 max-sm:px-4 text-center md:text-lg 3xl:text-2xl">
+          {textData?.availability}
+        </p>
       </section>
     </>
   );
