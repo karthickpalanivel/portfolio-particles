@@ -1,14 +1,14 @@
 import React from "react";
 
-const TagIcon = ({ color }) => {
+const TagIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="currentColor" /* 👈 Changed from "none" */
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="currentColor"
-      className="size-6"
+      stroke="none" /* 👈 Changed from "currentColor" */
+      className="size-6 text-black dark:text-white"
     >
       <path
         strokeLinecap="round"

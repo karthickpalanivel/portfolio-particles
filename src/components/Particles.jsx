@@ -1,27 +1,16 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
-// import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { loadSlim } from "@tsparticles/slim";
 
-// const theme = localStorage.getItem("theme");
-
-// const bgColor = theme ? "#000" : "#fff";
-// const color = theme ? "#fff" : "#000";
-
-const ParticlesComponent = (props) => {
+// STEP 3: Accept the theme prop passed down from App.js
+const ParticlesComponent = ({ id, theme }) => {
   const [init, setInit] = useState(false);
-  // this should be run only once per application lifetime
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -31,11 +20,15 @@ const ParticlesComponent = (props) => {
     //console.log(container);
   };
 
+  // STEP 3: Dynamically define colors based on the current theme
+  const bgColor = theme === "dark" ? "#000000" : "#ffffff";
+  const particleColor = theme === "dark" ? "#ffffff" : "#000000";
+
   const options = useMemo(
     () => ({
       background: {
         color: {
-          value: "#000",
+          value: bgColor, // 👈 Dynamically applied
         },
       },
       fpsLimit: 120,
@@ -62,10 +55,10 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#fff",
+          value: particleColor, // 👈 Dynamically applied
         },
         links: {
-          color: "#fff",
+          color: particleColor, // 👈 Dynamically applied
           distance: 100,
           enable: true,
           opacity: 0.3,
@@ -99,10 +92,12 @@ const ParticlesComponent = (props) => {
       },
       detectRetina: false,
     }),
-    []
+    [bgColor, particleColor], // 👈 CRITICAL: Tells React to recalculate options when theme colors change!
   );
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />;
+  if (!init) return <></>; // Optional: prevents rendering blank canvas before engine loads
+
+  return <Particles id={id} init={particlesLoaded} options={options} />;
 };
 
 export default ParticlesComponent;

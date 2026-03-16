@@ -1,14 +1,16 @@
 import React from "react";
 
-const XcloseIcon = ({colors}) => {
+// Note: You can even remove the {colors} prop if you want,
+// because Tailwind will handle it all via classes now!
+const XcloseIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke="#fff"
-      className="size-6"
+      stroke="currentColor"
+      className="size-6 text-black dark:text-white"
     >
       <path
         strokeLinecap="round"

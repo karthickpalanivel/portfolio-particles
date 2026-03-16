@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomeIcon = ({ color }) => {
+const HomeIcon = () => {
   return (
     <div>
       <svg
@@ -9,7 +9,7 @@ const HomeIcon = ({ color }) => {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-6"
+        className="size-6 text-black dark:text-white"
       >
         <path
           strokeLinecap="round"

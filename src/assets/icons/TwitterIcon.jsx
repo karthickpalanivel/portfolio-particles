@@ -1,15 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
-const TwitterIcon = ({ colors }) => {
+const TwitterIcon = () => {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1668.56 1221.19"
-        fill={colors}
-        color="#fff"
+        fill="currentColor" /* 👈 Changed from {colors} */
+        /* Deleted color="#fff" */
         strokeWidth={1.5}
-        className="size-6"
+        stroke="none" /* 👈 Changed from "currentColor" because it's a fill icon */
+        className="size-6 text-black dark:text-white"
         id="twitter-x"
       >
         <path

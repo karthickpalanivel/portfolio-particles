@@ -4,14 +4,14 @@ const MediumIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
+      fill="currentColor" /* 👈 Changed from "white" */
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      className="size-6"
-      stroke="#000"
+      stroke="none" /* 👈 Usually fill-based logos don't need strokes */
+      className="size-6 text-black dark:text-white"
     >
       <path
-        fill="#fff"
+        fill="currentColor" /* 👈 Changed from "#fff" */
         d="M18.75 5S18 5 18 5.75v8.5s0 .75.75.75H19v2h-6v-2h1V5.7h-.1L10.835 17H8.137L5.1 5.7H5V15h1v2H1v-2h.25S2 15 2 14.25v-8.5S2 5 1.25 5H1V3h6.634l2.327 8.66h.077L12.386 3H19v2h-.25z"
       />
     </svg>
@@ -19,9 +19,3 @@ const MediumIcon = () => {
 };
 
 export default MediumIcon;
-/*
-export const Medium = (props) => (
-      
-    )
-
-*/

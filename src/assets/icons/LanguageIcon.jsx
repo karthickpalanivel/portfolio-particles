@@ -1,6 +1,6 @@
 import React from "react";
 
-const LanguageIcon = ({ color }) => {
+const LanguageIcon = () => {
   return (
     <div>
       <svg
@@ -8,8 +8,8 @@ const LanguageIcon = ({ color }) => {
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke={color}
-        className="size-6"
+        stroke="currentColor"
+        className="size-6 text-black dark:text-white"
       >
         <path
           strokeLinecap="round"

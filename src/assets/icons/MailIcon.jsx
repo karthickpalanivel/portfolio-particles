@@ -1,6 +1,6 @@
 import React from "react";
 
-const MailIcon = ({ colors }) => {
+const MailIcon = () => {
   return (
     <div>
       <svg
@@ -8,8 +8,8 @@ const MailIcon = ({ colors }) => {
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke={colors}
-        className="size-6"
+        stroke="currentColor"
+        className="size-6 text-black dark:text-white"
       >
         <path
           strokeLinecap="round"
