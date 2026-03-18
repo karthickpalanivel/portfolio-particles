@@ -17,14 +17,12 @@ import "./App.css";
 function App() {
   const [active, setActive] = useState("home");
 
-  // STEP 1: Lift theme state here. Default to 'dark' if nothing is in local storage.
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   const handleTabChange = (tab) => {
     setActive(tab);
   };
 
-  // STEP 1: Toggle function to switch themes and save to local storage
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);

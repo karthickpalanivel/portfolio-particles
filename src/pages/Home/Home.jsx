@@ -1,7 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+
+  const {t} = useTranslation();  
   const langCode = localStorage.getItem("language") || "en";
 
   const [textData, setTextData] = useState();
