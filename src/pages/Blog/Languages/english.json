@@ -3,6 +3,16 @@
   "moreInfo": "More Info",
   "events": [
     {
+      "event": "Openclaws AI-Agents",
+      "location": "Facilio, Chennai",
+      "category": "Meet-up",
+      "eventDescription": "",
+      "externalLink": "https://luma.com/wmp8jlnw?tk=3Ao0o1",
+      "eventDate": "29 March 2026",
+      "eventImage": "https://res.cloudinary.com/dw8df4kgw/image/upload/v1731230217/dine_boo9na.jpg",
+      "eventLogo": "https://res.cloudinary.com/dw8df4kgw/image/upload/q_auto/f_auto/v1776603842/Screenshot_2026-04-19_182858_midlxg.png"
+    },
+    {
       "event": "Rust Dev host",
       "location": "Guindy, Chennai",
       "category": "Meet-up",
